@@ -51,8 +51,6 @@
      <Compile Include="Assets\code\data\DataPiece.cs" />
      <Compile Include="Assets\code\data\JSONFileDataPiece.cs" />
      <Compile Include="Assets\code\data\JSONUtil.cs" />
-     <None Include="Assets\art\deletemeAfterUpload.txt" />
-     <None Include="Assets\audio\deletemeAfterUpload.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
