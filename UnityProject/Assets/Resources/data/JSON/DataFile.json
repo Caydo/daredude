@@ -1,0 +1,16 @@
+[
+	{
+		"Number": 1,
+		"Name": "Awesome Name",
+		"Power": 400,
+		"Points": 5,
+		"Requirement": "0",
+		"Points": 10.3,
+		"AdditionalDataPieces" :
+		[
+			{
+				"Name" : "Really Cool Name"
+			}
+		]
+	}
+]
