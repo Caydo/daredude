@@ -5,6 +5,7 @@ using System.Linq;
 public class Vehicle : MonoBehaviour {
     public float acceleration;
     public float velocity; // game coords / sec
+    public string type = "Car";
 
     public static Vector3 FORWARD_DIRECTION = new Vector3(0, 0, 1);
 
@@ -22,12 +23,12 @@ public class Vehicle : MonoBehaviour {
 
     public void Succeed()
     {
-        game.UpdateVehicleSucceeded();
+        game.UpdateVehicleSucceeded(type);
         GameObject.Destroy(gameObject);
     }
     public void Fail()
     {
-        game.UpdateVehicleFailed();
+        game.UpdateVehicleFailed(type);
         GameObject.Destroy(gameObject);
     }
 

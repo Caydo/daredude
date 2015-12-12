@@ -35,7 +35,6 @@ public class LaneSpawnController : MonoBehaviour {
         secondSpawnRule._type = "Car";
         secondSpawnRule.fixedTime = .5f;
         spawnRules.Add(secondSpawnRule);
-
         // end testing
 	}
 
@@ -48,7 +47,7 @@ public class LaneSpawnController : MonoBehaviour {
             foreach(Vehicle v in newSpawns)
             {
                 v.transform.SetParent(transform, false);
-                globalSpawnController.UpdateVehicleSpawned();
+                globalSpawnController.UpdateVehicleSpawned(v.type);
             }
         }
     }

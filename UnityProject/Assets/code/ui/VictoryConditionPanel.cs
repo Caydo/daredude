@@ -29,8 +29,8 @@ public class VictoryConditionPanel : MonoBehaviour {
 	}
 	
 	void Update () {
-        success.text = game.successVehicles.ToString();
-        fail.text = game.failVehicles.ToString();
-        total.text = game.spawnedVehicles.ToString(); 
+        success.text = game.successVehicles().ToString();
+        fail.text = game.failVehicles().ToString();
+        total.text = game.spawnedVehicles().ToString(); 
 	}
 }

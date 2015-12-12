@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\code\States\StateMachine.cs" />
+     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\EndConditions.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Lane.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\LaneSpawnController.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Road.cs" />
@@ -66,6 +67,7 @@
      <Compile Include="Assets\code\data\JudgeQuestion.cs" />
      <Compile Include="Assets\code\data\JudgedPerson.cs" />
      <Compile Include="Assets\code\ui\CastVerdictSelectable.cs" />
+     <Compile Include="Assets\code\ui\DisplayJudgedPersonTags.cs" />
      <Compile Include="Assets\code\ui\DisplayQuestionTextFromID.cs" />
      <Compile Include="Assets\code\ui\GamePanel.cs" />
      <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />
