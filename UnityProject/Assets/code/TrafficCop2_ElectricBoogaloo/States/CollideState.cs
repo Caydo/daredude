@@ -2,14 +2,21 @@
 using System.Collections;
 
 public class CollideState : MonoBehaviour {
+    Vehicle self;
 
-	// Use this for initialization
-	void Start () {
-	
+    float explodeTimeRemaining; 
+
+	void OnEnable () {
+        self = transform.parent.parent.GetComponent<Vehicle>();
+
+        explodeTimeRemaining = 1f;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-	
+        explodeTimeRemaining -= Time.deltaTime;
+        if(explodeTimeRemaining <= 0)
+        {
+            self.Fail();
+        }
 	}
 }
