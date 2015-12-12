@@ -12,6 +12,7 @@ public class DataContainer : MonoBehaviour
   const string DATA_FILE_PREFIX = "data/JSON/";
   public Dictionary<int, JudgedPerson> JudgedPeople = new Dictionary<int, JudgedPerson>();
   public Dictionary<int, JudgeQuestion> JudgeQuestions = new Dictionary<int, JudgeQuestion>();
+  public bool DataCollected = false;
 
   void Start()
   {
@@ -27,6 +28,7 @@ public class DataContainer : MonoBehaviour
 
     var judgeQuestionsFile = Resources.Load(string.Format("{0}{1}", DATA_FILE_PREFIX, judgeQuestionsFileName)) as TextAsset;
     getDataPieces(jsonUtil, judgeQuestionsFile, JSONUtil.JSONDataType.JudgeQuestion);
+    DataCollected = true;
   }
 
   void getDataPieces(JSONUtil jsonUtil, TextAsset dataFile, JSONUtil.JSONDataType dataType)

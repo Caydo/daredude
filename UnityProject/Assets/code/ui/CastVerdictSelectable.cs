@@ -9,12 +9,7 @@ public class CastVerdictSelectable : MonoBehaviour
     Absolution
   }
   [SerializeField] Verdict verdict = Verdict.Absolution;
-  Dictionary<int, JudgedPerson> judgedPeople = new Dictionary<int, JudgedPerson>();
-
-  void Start()
-  {
-    judgedPeople = GameObject.FindWithTag("DataContainer").GetComponent<DataContainer>().JudgedPeople;
-  }
+  [SerializeField] GamePanel gamePanel = null;
 
   public void CastVerdict()
   {
@@ -27,7 +22,7 @@ public class CastVerdictSelectable : MonoBehaviour
       damnPerson();
     }
 
-    judgeNewPerson();
+    gamePanel.JudgeNewPerson();
   }
 
   void absolvePerson()
@@ -38,12 +33,5 @@ public class CastVerdictSelectable : MonoBehaviour
   void damnPerson()
   {
     Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
-  }
-
-  void judgeNewPerson()
-  {
-    // get a random index then get the corresponding judged person and set them
-    int randomNumber = Random.Range(0, judgedPeople.Count - 1);
-    //SetJudgedPerson(judgedPeople[randomNumber]);
   }
 }
