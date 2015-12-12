@@ -9,7 +9,6 @@ public class Judge : MonoBehaviour
 {
   public Image m_judgedPortrait;
   public Text m_judgedName;
-  public List<Text> m_judgedTraits;
   public Text m_judgedSpeechText;
   public List<DisplayQuestionTextFromID> m_questions;
   int[] cachedQuestionIDs = null;
