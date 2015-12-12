@@ -69,7 +69,8 @@
      <Compile Include="Assets\code\ui\CastVerdictSelectable.cs" />
      <Compile Include="Assets\code\ui\DisplayJudgedPersonTags.cs" />
      <Compile Include="Assets\code\ui\DisplayQuestionTextFromID.cs" />
-     <Compile Include="Assets\code\ui\GamePanel.cs" />
+     <Compile Include="Assets\code\ui\Judge.cs" />
+     <Compile Include="Assets\code\ui\JudgedPersonDisplayImage.cs" />
      <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />
      <Compile Include="Assets\code\ui\VictoryConditionPanel.cs" />
      <Compile Include="Assets\code\util\Finder.cs" />
