@@ -33,7 +33,7 @@ public class LaneSpawnController : MonoBehaviour {
 
         var secondSpawnRule = new FixTimeSpawn();
         secondSpawnRule._type = "Car";
-        secondSpawnRule.fixedTime = .5f;
+        secondSpawnRule.fixedTime = 2f;
         spawnRules.Add(secondSpawnRule);
         // end testing
 	}
