@@ -37,7 +37,7 @@ public class Vehicle : MonoBehaviour {
             .Select(t => t.GetComponent<StateMachine>())
             .Where(t => t != null)
             .First();
-        if (otherStateMachine.CurrentState != "Collide")
+        if (otherStateMachine.CurrentState == "Go")
         {
             otherStateMachine.GoTo("Collide");
             stateMachine.GoTo("Collide");
