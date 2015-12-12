@@ -13,13 +13,13 @@ public class GoState : GoingState {
 	void Update () {
         self.velocity += self.acceleration * Time.deltaTime;
 
-        var currentPosition = self.transform.position;
+        var currentPosition = self.transform.localPosition;
 
         var newPosDueToVelocity = (self.velocity * Time.deltaTime);
 
-        self.transform.position = self.transform.position + (newPosDueToVelocity * Vehicle.FORWARD_DIRECTION);
+        self.transform.localPosition = self.transform.localPosition + (newPosDueToVelocity * Vehicle.FORWARD_DIRECTION);
 
-        if(directionMagnitude(self.transform.position) >= selfLane.successRange)
+        if(directionMagnitude(self.transform.localPosition) >= selfLane.successRange)
         {
             self.Succeed();
         }
