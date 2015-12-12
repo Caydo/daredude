@@ -8,7 +8,8 @@ public class Vehicle : MonoBehaviour {
 
     public static Vector3 FORWARD_DIRECTION = new Vector3(0, 0, 1);
 
-    StateMachine stateMachine; 
+    StateMachine stateMachine;
+    SpawnController game; 
 
     void Start()
     {
@@ -16,22 +17,23 @@ public class Vehicle : MonoBehaviour {
             .Select(t => t.GetComponent<StateMachine>())
             .Where(t => t != null)
             .First();
+        game = Finder.Find<SpawnController>("GameController");
     }
 
     public void Succeed()
     {
-        // TODO add to our tally of successful vehicles and stuff? 
+        game.UpdateVehicleSucceeded();
         GameObject.Destroy(gameObject);
     }
     public void Fail()
     {
-        // TODO add to tally, etc
+        game.UpdateVehicleFailed();
         GameObject.Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(string.Format("Vehicle Collision! {0} {1}", transform.name, other.name));
+        //Debug.Log(string.Format("Vehicle Collision! {0} {1}", transform.name, other.name));
         var otherVehicle = other.gameObject.GetComponent<Vehicle>();
         var otherStateMachine = otherVehicle.transform.Cast<Transform>()
             .Select(t => t.GetComponent<StateMachine>())
