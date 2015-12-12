@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
+using UnityEngine.UI;
 
 public class TrafficDirector : MonoBehaviour {
     public Transform roads;
     public int currentRoad = 0; // road cop is currently directing
+    public Sprite GoSprite;
+    public Sprite StopSprite;
+    public Image LaneStatus; 
+
     public Transform CurrentRoad()
     {
         return roads.GetChild(currentRoad);
@@ -21,12 +26,8 @@ public class TrafficDirector : MonoBehaviour {
 
         if(Input.GetButtonUp("Fire2")) // fire 2 will be the toggle road type 
         {
-            foreach(Lane l in CurrentRoad().Cast<Transform>()
-                .Select(t => t.GetComponent<Lane>())
-                .Where(t => t != null && !t.allowEntry)) // only lanes that allow egress need a stop/go status 
-            {
-                l.currentPolicy = (l.currentPolicy == TrafficPolicy.Go) ? TrafficPolicy.Stop : TrafficPolicy.Go;
-            }
+            var road = CurrentRoad().GetComponent<Road>();
+            road.currentPolicy = (road.currentPolicy == TrafficPolicy.Go) ? TrafficPolicy.Stop : TrafficPolicy.Go;
         }
 
         // point toward our current road 
@@ -40,6 +41,8 @@ public class TrafficDirector : MonoBehaviour {
             var curRotation = transform.rotation;
             curRotation.y = rotation;
             transform.rotation = curRotation;
+
+            LaneStatus.sprite = (CurrentRoad().GetComponent<Road>().currentPolicy == TrafficPolicy.Go) ? GoSprite : StopSprite; 
         }
     }
 }
