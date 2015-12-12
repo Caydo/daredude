@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Lane.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Road.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\TrafficDirector.cs" />
     <Compile Include="Assets\code\data\AdditionalDataPiece.cs" />
     <Compile Include="Assets\code\data\DataContainer.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\code\data\JSONUtil.cs" />
     <Compile Include="Assets\code\data\JudgeQuestion.cs" />
     <Compile Include="Assets\code\data\JudgedPerson.cs" />
+    <Compile Include="Assets\code\ui\CastVerdictSelectable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\art\DeleteMeWhenTheresArt.txt" />
