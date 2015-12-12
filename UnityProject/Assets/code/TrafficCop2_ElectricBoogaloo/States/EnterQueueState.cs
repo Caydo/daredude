@@ -18,16 +18,16 @@ public class EnterQueueState : GoingState {
 	    // forward until we hit the end of the lane OR there's a car within separation in front of us 
         self.velocity += self.acceleration * Time.deltaTime;
 
-        var currentPosition = self.transform.position;
+        var currentPosition = self.transform.localPosition;
         var vehiclesAhead = self.transform.parent.Cast<Transform>()
             .Where(t => {
                 var notSelf = t!= self.transform;
-                var isAhead = directionMagnitude(t.position) > directionMagnitude(self.transform.position);
+                var isAhead = directionMagnitude(t.localPosition) > directionMagnitude(self.transform.localPosition);
                 var isVehicle = (t.GetComponent<Vehicle>() != null);
                 //Debug.Log(string.Format("checking vehicles ahead {0} {1} {2} {3} {4}", self.transform.name, t.name, notSelf, isAhead, isVehicle));
                 return notSelf && isAhead && isVehicle;
             })
-            .Select(t => t.position)
+            .Select(t => t.localPosition)
             .Select(t => directionMagnitude(t))
             .OrderBy(t => t);
 
@@ -48,11 +48,11 @@ public class EnterQueueState : GoingState {
         var newPosDueToVelocity = (directionMagnitude(currentPosition) + (self.velocity * Time.deltaTime));
         var scaleOfNewPosition = Mathf.Min(newPosDueToVelocity, Mathf.Min(separation, selfLane.carRangeMax)) - directionMagnitude(currentPosition);
 
-        self.transform.position = self.transform.position + (scaleOfNewPosition * Vehicle.FORWARD_DIRECTION);
+        self.transform.localPosition = self.transform.localPosition + (scaleOfNewPosition * Vehicle.FORWARD_DIRECTION);
 
         // if we hit the end of the lane wait for it to be 'go' status
         //Debug.Log(string.Format("checking range {0} {1} {2} {3}", self.transform.position, selfLane.carRangeMax, self.transform.name, vehiclesAhead.Any()));
-        if (directionMagnitude(self.transform.position) >= selfLane.carRangeMax)
+        if (directionMagnitude(self.transform.localPosition) >= selfLane.carRangeMax)
         {
             stateMachine.GoTo("WaitToGo");
         }
