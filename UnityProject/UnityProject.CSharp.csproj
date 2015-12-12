@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.0f4</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -76,6 +78,8 @@
     <Compile Include="Assets\code\data\DataPiece.cs" />
     <Compile Include="Assets\code\data\JSONFileDataPiece.cs" />
     <Compile Include="Assets\code\data\JSONUtil.cs" />
+    <Compile Include="Assets\code\data\JudgedPerson.cs" />
+    <Compile Include="Assets\code\data\JudgeQuestion.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\art\DeleteMeWhenTheresArt.txt" />
