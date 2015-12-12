@@ -65,9 +65,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\code\States\StateMachine.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Lane.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Road.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\SpawnController.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\CollideState.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\EnterQueueState.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\GoState.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\GoingState.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\WaitToGoState.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\TrafficDirector.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Vehicle.cs" />
     <Compile Include="Assets\code\data\AdditionalDataPiece.cs" />
     <Compile Include="Assets\code\data\DataContainer.cs" />
     <Compile Include="Assets\code\data\DataPiece.cs" />
@@ -76,6 +84,9 @@
     <Compile Include="Assets\code\data\JudgeQuestion.cs" />
     <Compile Include="Assets\code\data\JudgedPerson.cs" />
     <Compile Include="Assets\code\ui\CastVerdictSelectable.cs" />
+    <Compile Include="Assets\code\ui\GamePanel.cs" />
+    <Compile Include="Assets\code\ui\QuestionControl.cs" />
+    <Compile Include="Assets\code\util\RandomExt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\art\DeleteMeWhenTheresArt.txt" />
