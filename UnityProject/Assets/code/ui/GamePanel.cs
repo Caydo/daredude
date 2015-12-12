@@ -15,8 +15,7 @@ public class GamePanel : MonoBehaviour
   int[] cachedQuestionIDs = null;
   DataContainer dataContainer;
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
-  [SerializeField] Image JudgedPersonHeadshot = null;
-  const string HEADSHOT_DATA_FILE_PREFIX = "art/headshots/";
+  [SerializeField] JudgedPersonDisplayImage[] JudgedPersonBodyParts = null;
 
   IEnumerator Start()
   {
@@ -29,6 +28,13 @@ public class GamePanel : MonoBehaviour
     JudgeNewPerson();
   }
 
+  JudgedPerson getRandomPerson()
+  {
+    int randomNumber = Random.Range(0, dataContainer.JudgedPeople.Count - 1);
+    JudgedPerson person = dataContainer.JudgedPeople[randomNumber];
+    return person;
+  }
+
   public void JudgeNewPerson()
   {
     displayJudgedTags.Tags.Clear();
@@ -37,32 +43,23 @@ public class GamePanel : MonoBehaviour
     {
       if (m_judgedName != null) m_judgedName.text = person.Name;
       if (m_judgedSpeechText != null) m_judgedSpeechText.text = person.StartText;
-      updateQuestions(person.Questions);
+
+      for (int questionIndex = 0; questionIndex < m_questions.Count; questionIndex++)
+      {
+        m_questions[questionIndex].ID = person.Questions[questionIndex];
+      }
+
+      cachedQuestionIDs = person.Questions;
     }
 
-    string fileName = string.Format("{0}{1}", HEADSHOT_DATA_FILE_PREFIX, person.Image);
-    Sprite judgedPersonSprite = Resources.Load<Sprite>(fileName);
-    JudgedPersonHeadshot.sprite = judgedPersonSprite;
-  }
-
-  JudgedPerson getRandomPerson()
-  {
-    int randomNumber = Random.Range(0, dataContainer.JudgedPeople.Count - 1);
-    JudgedPerson person = dataContainer.JudgedPeople[randomNumber];
-    return person;
+    foreach (JudgedPersonDisplayImage bodypart in JudgedPersonBodyParts)
+    {
+      bodypart.DisplayNewPerson(person);
+    }
   }
       
-  void updateQuestions(int[] questionIDs)
-  {
-    for(int questionIndex = 0; questionIndex < m_questions.Count; questionIndex++)
-    {
-      m_questions[questionIndex].ID = questionIDs[questionIndex];
-    }
-
-    cachedQuestionIDs = questionIDs;
-  }
-
-  public void UpdateData(JudgeQuestion judgeQuestion)
+  // a question button was pressed, update relevant UI
+  public void UpdateDataFromQuestion(JudgeQuestion judgeQuestion)
   {
     // update questions
     List<int> newCachedIds = new List<int>();

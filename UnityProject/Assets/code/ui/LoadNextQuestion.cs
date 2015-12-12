@@ -30,6 +30,6 @@ public class LoadNextQuestion : MonoBehaviour
 
   public void LoadQuestion()
   {
-    gamePanel.UpdateData(dataContainer.JudgeQuestions[displayText.ID]);
+    gamePanel.UpdateDataFromQuestion(dataContainer.JudgeQuestions[displayText.ID]);
   }
 }
