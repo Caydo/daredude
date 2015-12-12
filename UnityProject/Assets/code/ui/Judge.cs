@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Assets.code.ui;
 
-public class GamePanel : MonoBehaviour
+public class Judge : MonoBehaviour
 {
   public Image m_judgedPortrait;
   public Text m_judgedName;

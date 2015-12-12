@@ -46,7 +46,7 @@
 		"name": "Candace Berget",
 		"bio": "A mover and shaker in the real estate world, Candace didn't have time for family and friends. She ran her businesses to the best she could.",
 		"startText": "Hi, Candace, CEO, and real estate tycoon. I did good with what you gave me.",
-		"tags": "Wealthy,Greedy,Honest",
+		"tags": ["Wealthy","Greedy","Honest"],
 		"questions": [9,10,11],
 		"eyes": "test",
 		"ears": "test",

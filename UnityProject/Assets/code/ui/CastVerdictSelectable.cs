@@ -9,7 +9,7 @@ public class CastVerdictSelectable : MonoBehaviour
     Absolution
   }
   [SerializeField] Verdict verdict = Verdict.Absolution;
-  [SerializeField] GamePanel gamePanel = null;
+  [SerializeField] Judge gamePanel = null;
 
   public void CastVerdict()
   {

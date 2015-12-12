@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LoadNextQuestion : MonoBehaviour
 {
   [SerializeField] DisplayQuestionTextFromID displayText = null;
-  [SerializeField] GamePanel gamePanel = null;
+  [SerializeField] Judge gamePanel = null;
   DataContainer dataContainer;
   int cachedID = -1;
 
