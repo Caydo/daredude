@@ -10,8 +10,8 @@ public class DataContainer : MonoBehaviour
   [SerializeField] string judgeQuestionsFileName = "StPetersPleaseTextQuestions";
 
   const string DATA_FILE_PREFIX = "data/JSON/";
-  Dictionary<int, JudgedPerson> JudgedPeopleCollection = new Dictionary<int, JudgedPerson>();
-  Dictionary<int, JudgeQuestion> JudgeQuestionsCollection = new Dictionary<int, JudgeQuestion>();
+  public Dictionary<int, JudgedPerson> JudgedPeople = new Dictionary<int, JudgedPerson>();
+  public Dictionary<int, JudgeQuestion> JudgeQuestions = new Dictionary<int, JudgeQuestion>();
 
   void Start()
   {
@@ -46,13 +46,13 @@ public class DataContainer : MonoBehaviour
       case JSONUtil.JSONDataType.JudgedPerson:
         foreach (JudgedPerson judgedPerson in dataPieces)
         {
-          JudgedPeopleCollection.Add(judgedPerson.ID, judgedPerson);
+          JudgedPeople.Add(judgedPerson.ID, judgedPerson);
         }
         break;
       case JSONUtil.JSONDataType.JudgeQuestion:
         foreach (JudgeQuestion judgeQuestion in dataPieces)
         {
-          JudgeQuestionsCollection.Add(judgeQuestion.ID, judgeQuestion);
+          JudgeQuestions.Add(judgeQuestion.ID, judgeQuestion);
         }
         break;
     }

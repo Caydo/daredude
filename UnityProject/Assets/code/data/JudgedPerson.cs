@@ -13,7 +13,7 @@ namespace Assets.code.data
     [JsonName("startText")]
     public string StartText;
     [JsonName("tags")]
-    public string[] Tag;
+    public string[] Tags;
     [JsonName("questions")]
     public int[] Questions;
   }
