@@ -4,7 +4,7 @@ using System.Linq;
 
 public class TrafficDirector : MonoBehaviour {
     public Transform roads;
-    public int currentRoad; // road cop is currently directing
+    public int currentRoad = 0; // road cop is currently directing
     public Transform CurrentRoad()
     {
         return roads.GetChild(currentRoad);
@@ -27,6 +27,19 @@ public class TrafficDirector : MonoBehaviour {
             {
                 l.currentPolicy = (l.currentPolicy == TrafficPolicy.Go) ? TrafficPolicy.Stop : TrafficPolicy.Go;
             }
+        }
+
+        // point toward our current road 
+        Vector2 refVector = new Vector2(-1, 0); // x / z axis 
+        if(CurrentRoad() != null)
+        {
+            var roadPos = CurrentRoad().transform.position; 
+            var roadVector = new Vector2(roadPos.x, roadPos.z);
+            var rotation = Vector2.Angle(refVector, roadVector);
+
+            var curRotation = transform.rotation;
+            curRotation.y = rotation;
+            transform.rotation = curRotation;
         }
     }
 }
