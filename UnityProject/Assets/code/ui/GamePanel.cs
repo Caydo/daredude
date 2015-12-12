@@ -15,6 +15,8 @@ public class GamePanel : MonoBehaviour
   int[] cachedQuestionIDs = null;
   DataContainer dataContainer;
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
+  [SerializeField] Image JudgedPersonHeadshot = null;
+  const string HEADSHOT_DATA_FILE_PREFIX = "art/headshots/";
 
   IEnumerator Start()
   {
@@ -31,21 +33,16 @@ public class GamePanel : MonoBehaviour
   {
     displayJudgedTags.Tags.Clear();
     JudgedPerson person = getRandomPerson();
-    if (person != null)
+    if(person != null)
     {
-      //if (m_judgedPortrait != null) m_judgedPortrait.sprite = ?
       if (m_judgedName != null) m_judgedName.text = person.Name;
       if (m_judgedSpeechText != null) m_judgedSpeechText.text = person.StartText;
       updateQuestions(person.Questions);
     }
-    else
-    {
-      // clear everything
-      if(m_judgedPortrait != null) m_judgedPortrait.sprite = null;
-      if (m_judgedName != null) m_judgedName.text = string.Empty;
-      if (m_judgedSpeechText != null) m_judgedSpeechText.text = string.Empty;
-      updateQuestions(null);
-    }
+
+    string fileName = string.Format("{0}{1}", HEADSHOT_DATA_FILE_PREFIX, person.Image);
+    Sprite judgedPersonSprite = Resources.Load<Sprite>(fileName);
+    JudgedPersonHeadshot.sprite = judgedPersonSprite;
   }
 
   JudgedPerson getRandomPerson()

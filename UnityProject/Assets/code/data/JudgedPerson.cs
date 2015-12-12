@@ -16,5 +16,7 @@ namespace Assets.code.data
     public string[] Tags;
     [JsonName("questions")]
     public int[] Questions;
+    [JsonName("image")]
+    public string Image;
   }
 }
