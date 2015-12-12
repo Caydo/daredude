@@ -31,11 +31,11 @@ public class TrafficDirector : MonoBehaviour {
             
             if(theirPos.y > 0)
             {
-                Debug.Log("in the case");
+                //Debug.Log("in the case");
                 targetAngle = (targetAngle + 180) % 360;
             }
 
-            Debug.Log(string.Format("rotating from {0} to {1}", currentRotation, targetAngle));
+            //Debug.Log(string.Format("rotating from {0} to {1}", currentRotation, targetAngle));
             transform.Rotate(0, targetAngle - currentRotation, 0, Space.World);
             currentRotation = targetAngle;
         }

@@ -6,7 +6,7 @@ public class SpawnController : MonoBehaviour {
     public Transform roads;
     public Vehicle carPrefab;
     
-    public int spawnedVehicles;
+    public int spawnedVehicles ;
     public int successVehicles;
     public int failVehicles;
    

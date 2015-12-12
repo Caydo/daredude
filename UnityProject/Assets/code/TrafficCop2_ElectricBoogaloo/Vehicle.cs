@@ -35,14 +35,17 @@ public class Vehicle : MonoBehaviour {
     {
         //Debug.Log(string.Format("Vehicle Collision! {0} {1}", transform.name, other.name));
         var otherVehicle = other.gameObject.GetComponent<Vehicle>();
-        var otherStateMachine = otherVehicle.transform.Cast<Transform>()
-            .Select(t => t.GetComponent<StateMachine>())
-            .Where(t => t != null)
-            .First();
-        if (otherStateMachine.CurrentState == "Go")
+        if (otherVehicle != null) // ignore collision with other things than vehicles
         {
-            otherStateMachine.GoTo("Collide");
-            stateMachine.GoTo("Collide");
+            var otherStateMachine = otherVehicle.transform.Cast<Transform>()
+                .Select(t => t.GetComponent<StateMachine>())
+                .Where(t => t != null)
+                .First();
+            if (otherStateMachine.CurrentState == "Go")
+            {
+                otherStateMachine.GoTo("Collide");
+                stateMachine.GoTo("Collide");
+            }
         }
     }
 }
