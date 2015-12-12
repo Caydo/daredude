@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class QuestionControl : MonoBehaviour {
+public class QuestionControl : MonoBehaviour
+{
+    public Text m_questionText;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public void DisplayQuestion(int questionID)
+    {
+        if(questionID == -1)
+        {
+            m_questionText.text = string.Empty;
+            gameObject.SetActive(false);
+            return;
+        }
+        //todo
+        gameObject.SetActive(true);
+        m_questionText.text = questionID.ToString();
+    }
 }
