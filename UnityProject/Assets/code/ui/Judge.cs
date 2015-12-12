@@ -15,7 +15,6 @@ public class Judge : MonoBehaviour
   DataContainer dataContainer;
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
   [SerializeField] JudgedPersonDisplayImage[] JudgedPersonBodyParts = null;
-  List<JudgedPerson> JudgedSouls = new List<JudgedPerson>();
 
   IEnumerator Start()
   {
@@ -31,18 +30,16 @@ public class Judge : MonoBehaviour
   JudgedPerson getRandomPerson()
   {
     JudgedPerson person = null;
-    List<int> availableIDs = new List<int>();
+    List<int> SoulsToBeJudged = new List<int>();
     foreach(KeyValuePair<int, JudgedPerson> kvp in dataContainer.JudgedPeople)
     {
-      availableIDs.Add(kvp.Value.ID);
+      SoulsToBeJudged.Add(kvp.Value.ID);
     }
 
-    int randomNumber = Random.Range(0, availableIDs.Count - 1);
-    person = dataContainer.JudgedPeople[availableIDs[randomNumber]];
-    
-    if(!JudgedSouls.Contains(person))
+    int randomNumber = Random.Range(0, SoulsToBeJudged.Count - 1);
+    if(SoulsToBeJudged.Count > 0)
     {
-      JudgedSouls.Add(person);
+      person = dataContainer.JudgedPeople[SoulsToBeJudged[randomNumber]];
       dataContainer.JudgedPeople.Remove(person.ID);
       return person;
     }
