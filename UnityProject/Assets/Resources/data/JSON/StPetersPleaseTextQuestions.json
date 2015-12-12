@@ -3,63 +3,63 @@
 		"id": "0",
 		"question": "Did you try your best?",
 		"answer": "Worked to provide for my family, never called in sick.",
-		"next": "1",
+		"next": "-1",
 		"tagReveal": "Hard Working"
 	},
 	{
 		"id": "1",
 		"question": "What was your goal?",
 		"answer": "I never cared much for the green stuff. I just wanted my family to be happy.",
-		"next": "2",
+		"next": "-1",
 		"tagReveal": "Poor"
 	},
 	{
 		"id": "2",
 		"question": "Any skeletons in the closet?",
 		"answer": "I don't know, I guess I could've given more to charity than I did.",
-		"next": "0",
+		"next": "-1",
 		"tagReveal": "Generous"
 	},
 	{
 		"id": "3",
 		"question": "Did you try your best?",
 		"answer": "Of course I did, I did everything. I travelled, I drank, I ate. Lived the good life.",
-		"next": "4",
+		"next": "-1",
 		"tagReveal": "Glutton"
 	},
 	{
 		"id": "4",
 		"question": "What was your goal?",
 		"answer": "To see and do everything. I only regret not going to Paris that one time.",
-		"next": "5",
+		"next": "-1",
 		"tagReveal": "Lazy"
 	},
 	{
 		"id": "5",
 		"question": "Any skeletons in the closet?",
 		"answer": "Well when Daddy died, he didn't leave me anything, it's all his fault.",
-		"next": "3",
+		"next": "-1",
 		"tagReveal": "Poor"
 	},
 	{
 		"id": "6",
 		"question": "Did you try your best?",
 		"answer": "That I did. Worked that 9 to 5 to bring home the bacon. Never hear me complaining.",
-		"next": "7",
+		"next": "-1",
 		"tagReveal": "Hard Working"
 	},
 	{
 		"id": "7",
 		"question": "What was your goal?",
 		"answer": "Oh I just wanted to make people smile, you know? Have a real grand time.",
-		"next": "8",
+		"next": "-1",
 		"tagReveal": "Kind"
 	},
 	{
 		"id": "8",
 		"question": "Any skeletons in the closet?",
 		"answer": "I had to leave the old country after me brother passed. He was a nasty one that boy.",
-		"next": "6",
+		"next": "-1",
 		"tagReveal": "Murderer"
 	},
 	{
@@ -80,7 +80,7 @@
 		"id": "11",
 		"question": "Any skeletons in the closet?",
 		"answer": "None. I was ruthless; but I never strayed from my principles.",
-		"next": "9",
+		"next": "-1",
 		"tagReveal": ""
 	},
 	{
