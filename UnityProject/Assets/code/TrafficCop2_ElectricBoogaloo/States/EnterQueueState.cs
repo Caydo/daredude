@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Linq;
 
-public class EnterQueueState : MonoBehaviour {
+public class EnterQueueState : GoingState {
     public float CAR_SEPARATION = .05f;
     Vehicle self;
     Lane selfLane; 
@@ -39,31 +39,16 @@ public class EnterQueueState : MonoBehaviour {
 
         // if we hit the end of the lane wait for it to be 'go' status
         //Debug.Log(string.Format("checking range {0} {1}", self.transform.position, selfLane.carRangeMax));
-        if (directionMagnitude(self.transform.position) > selfLane.carRangeMax)
+        if (directionMagnitude(self.transform.position) >= selfLane.carRangeMax)
         {
             stateMachine.GoTo("WaitToGo");
         }
+        // if we hit another car, then we need to lose acceleration
+        else if(vehiclesAhead.Any() && directionMagnitude(self.transform.position) >= (vehiclesAhead.First() - CAR_SEPARATION))
+        {
+            self.acceleration = 0;
+        }
 	}
 
-    float directionMagnitude(Vector3 origVector)
-    {
-        float retval = 0.0f;
-        if(Vehicle.FORWARD_DIRECTION.x > 0)
-        {
-            retval = origVector.x;
-        }
-        else if (Vehicle.FORWARD_DIRECTION.y > 0)
-        {
-            retval = origVector.y;
-        }
-        else
-        {
-            retval = origVector.z;
-        }
-        return retval;
-    }
-    Vector3 directionPosition(Vector3 origVector)
-    {
-        return Vector3.Scale(origVector, Vehicle.FORWARD_DIRECTION);
-    }
+
 }

@@ -2,14 +2,18 @@
 using System.Collections;
 
 public class WaitToGoState : MonoBehaviour {
+    StateMachine stateMachine;
+    Road road; 
 
-	// Use this for initialization
-	void Start () {
-	
+	void OnEnable () {
+        stateMachine = transform.parent.GetComponent<StateMachine>();
+        road = transform.parent.parent.parent.parent.GetComponent<Road>(); 
 	}
 	
-	// Update is called once per frame
 	void Update () {
-	
+        if(road.currentPolicy == TrafficPolicy.Go)
+        {
+            stateMachine.GoTo("Go");
+        }
 	}
 }

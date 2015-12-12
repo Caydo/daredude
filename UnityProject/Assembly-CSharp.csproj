@@ -51,6 +51,7 @@
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\CollideState.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\EnterQueueState.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\GoState.cs" />
+     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\GoingState.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\WaitToGoState.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\TrafficDirector.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Vehicle.cs" />

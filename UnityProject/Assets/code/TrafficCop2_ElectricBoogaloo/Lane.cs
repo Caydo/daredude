@@ -7,4 +7,5 @@ public class Lane : MonoBehaviour {
     public int indexInParent; // lane indices go from left to right in an anti-clockwise direction.
     public float carRangeMin = -.4f;
     public float carRangeMax = .4f;
+    public float successRange = 6f;
 }
