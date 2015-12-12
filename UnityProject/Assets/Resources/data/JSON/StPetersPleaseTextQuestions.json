@@ -1,107 +1,107 @@
 [
 	{
 		"id": "0",
-		"question": "JunkQuestion0",
-		"answer": "JunkAnswer0",
-		"next": "-1",
-		"tagReveal": "JunkTag0"
+		"question": "Did you try your best?",
+		"answer": "Worked to provide for my family, never called in sick.",
+		"next": "1",
+		"tagReveal": "Hard Working"
 	},
 	{
 		"id": "1",
-		"question": "JunkQuestion1",
-		"answer": "JunkAnswer1",
-		"next": "-1",
-		"tagReveal": "JunkTag0"
+		"question": "What was your goal?",
+		"answer": "I never cared much for the green stuff. I just wanted my family to be happy.",
+		"next": "2",
+		"tagReveal": "Poor"
 	},
 	{
 		"id": "2",
-		"question": "JunkQuestion2",
-		"answer": "JunkAnswer2",
-		"next": "3",
-		"tagReveal": "JunkTag0"
+		"question": "Any skeletons in the closet?",
+		"answer": "I don't know, I guess I could've given more to charity than I did.",
+		"next": "0",
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "3",
-		"question": "JunkQuestion3",
-		"answer": "JunkAnswer3",
-		"next": "-1",
-		"tagReveal": "JunkTag0"
+		"question": "Did you try your best?",
+		"answer": "Of course I did, I did everything. I travelled, I drank, I ate. Lived the good life.",
+		"next": "4",
+		"tagReveal": "Glutton"
 	},
 	{
 		"id": "4",
-		"question": "JunkQuestion4",
-		"answer": "JunkAnswer4",
-		"next": "6",
-		"tagReveal": "JunkTag1"
+		"question": "What was your goal?",
+		"answer": "To see and do everything. I only regret not going to Paris that one time.",
+		"next": "5",
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "5",
-		"question": "JunkQuestion5",
-		"answer": "JunkAnswer5",
-		"next": "6",
-		"tagReveal": ""
+		"question": "Any skeletons in the closet?",
+		"answer": "Well when Daddy died, he didn't leave me anything, it's all his fault.",
+		"next": "3",
+		"tagReveal": "Poor"
 	},
 	{
 		"id": "6",
-		"question": "JunkQuestion6",
-		"answer": "JunkAnswer6",
+		"question": "Did you try your best?",
+		"answer": "That I did. Worked that 9 to 5 to bring home the bacon. Never hear me complaining.",
 		"next": "7",
-		"tagReveal": ""
+		"tagReveal": "Hard Working"
 	},
 	{
 		"id": "7",
-		"question": "JunkQuestion7",
-		"answer": "JunkAnswer7",
+		"question": "What was your goal?",
+		"answer": "Oh I just wanted to make people smile, you know? Have a real grand time.",
 		"next": "8",
-		"tagReveal": ""
+		"tagReveal": "Kind"
 	},
 	{
 		"id": "8",
-		"question": "JunkQuestion8",
-		"answer": "JunkAnswer8",
-		"next": "1",
-		"tagReveal": "JunkTag2"
+		"question": "Any skeletons in the closet?",
+		"answer": "I had to leave the old country after me brother passed. He was a nasty one that boy.",
+		"next": "6",
+		"tagReveal": "Murderer"
 	},
 	{
 		"id": "9",
-		"question": "JunkQuestion9",
-		"answer": "JunkAnswer9",
-		"next": "11",
-		"tagReveal": "JunkTag3"
+		"question": "Did you try your best?",
+		"answer": "I worked hard, every single day; and I had a lot to show for it. What's so bad about that?",
+		"next": "10",
+		"tagReveal": "Wealthy"
 	},
 	{
 		"id": "10",
-		"question": "JunkQuestion10",
-		"answer": "JunkAnswer10",
-		"next": "12",
-		"tagReveal": "JunkTag3"
+		"question": "What was your goal?",
+		"answer": "I wanted to be rich. I did. And man was it great.",
+		"next": "11",
+		"tagReveal": "Greedy,Honest"
 	},
 	{
 		"id": "11",
-		"question": "JunkQuestion11",
-		"answer": "JunkAnswer11",
-		"next": "8",
+		"question": "Any skeletons in the closet?",
+		"answer": "None. I was ruthless; but I never strayed from my principles.",
+		"next": "9",
 		"tagReveal": ""
 	},
 	{
 		"id": "12",
-		"question": "JunkQuestion12",
-		"answer": "JunkAnswer12",
-		"next": "5",
-		"tagReveal": ""
+		"question": "Did you try your best?",
+		"answer": "Not all the time. I often got caught up in the wrong thing. What can I say?",
+		"next": "13",
+		"tagReveal": "Honest"
 	},
 	{
 		"id": "13",
-		"question": "JunkQuestion13",
-		"answer": "JunkAnswer13",
-		"next": "2",
-		"tagReveal": "JunkTag4"
+		"question": "What was your goal?",
+		"answer": "I lived for nature, I spent all I had getting away into the mountains.",
+		"next": "14",
+		"tagReveal": "Poor"
 	},
 	{
 		"id": "14",
-		"question": "JunkQuestion14",
-		"answer": "JunkAnswer14",
-		"next": "3",
-		"tagReveal": "JunkTag4a"
+		"question": "Any skeletons in the closet?",
+		"answer": "I had to kill a guy once. He drew a gun on me. Me versus him ya know?",
+		"next": "12",
+		"tagReveal": "Murderer"
 	}
 ]
