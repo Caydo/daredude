@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Assets.code.ui;
 
+[RequireComponent(typeof(JudgeStats))]
 public class Judge : MonoBehaviour
 {
   public Image m_judgedPortrait;
@@ -15,6 +16,7 @@ public class Judge : MonoBehaviour
   DataContainer dataContainer;
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
   [SerializeField] JudgedPersonDisplayImage[] JudgedPersonBodyParts = null;
+  [SerializeField] JudgeReportCard judgeReportCard = null;
 
   IEnumerator Start()
   {
@@ -67,10 +69,12 @@ public class Judge : MonoBehaviour
       {
         bodypart.DisplayNewPerson(person);
       }
+
+      GetComponent<JudgeStats>().JudgedPeople.Add(person);
     }
     else
     {
-      Debug.LogError("YOU RAN OUT OF PEOPLE TO JUDGE!!!!");
+      judgeReportCard.DisplayReportCard();
     }
   }
       
