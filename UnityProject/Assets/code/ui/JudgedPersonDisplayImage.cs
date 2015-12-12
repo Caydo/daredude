@@ -15,12 +15,12 @@ public class JudgedPersonDisplayImage : MonoBehaviour
     Hair = 5
   }
   public BodyPart BodypartToDisplay = BodyPart.Eyes;
-  const string EYES_ART_FILE_PREFIX = "art/headshots/";
-  const string EARS_ART_FILE_PREFIX = "art/headshots/";
-  const string NOSE_ART_FILE_PREFIX = "art/headshots/";
-  const string EYEBROWS_ART_FILE_PREFIX = "art/headshots/";
-  const string MOUTH_ART_FILE_PREFIX = "art/headshots/";
-  const string HAIR_ART_FILE_PREFIX = "art/headshots/";
+  const string EYES_ART_FILE_PREFIX = "art/characters/eyes/";
+  const string EARS_ART_FILE_PREFIX = "art/art/characters/ears";
+  const string NOSE_ART_FILE_PREFIX = "art/characters/nose/";
+  const string EYEBROWS_ART_FILE_PREFIX = "art/characters/eyesbrows/";
+  const string MOUTH_ART_FILE_PREFIX = "art/characters/mouth/";
+  const string HAIR_ART_FILE_PREFIX = "art/characters/hair/";
 
   public void DisplayNewPerson(JudgedPerson person)
   {
