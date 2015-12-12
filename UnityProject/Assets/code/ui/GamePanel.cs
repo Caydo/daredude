@@ -105,9 +105,17 @@ public class GamePanel : MonoBehaviour
     List<int> newCachedIds = new List<int>();
     for (int questionIndex = 0; questionIndex < m_questions.Count; questionIndex++)
     {
-      int newID = dataContainer.JudgeQuestions[cachedQuestionIDs[questionIndex]].Next;
-      m_questions[questionIndex].ID = newID;
-      newCachedIds.Add(newID);
+      int cachedID = cachedQuestionIDs[questionIndex];
+      if (dataContainer.JudgeQuestions.ContainsKey(cachedID))
+      {
+        int newID = dataContainer.JudgeQuestions[cachedQuestionIDs[questionIndex]].Next;
+        m_questions[questionIndex].ID = newID;
+        newCachedIds.Add(newID);
+      }
+      else
+      {
+        newCachedIds.Add(-1);
+      }
     }
 
     cachedQuestionIDs = newCachedIds.ToArray();

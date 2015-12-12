@@ -3,14 +3,14 @@
 		"id": "0",
 		"question": "JunkQuestion0",
 		"answer": "JunkAnswer0",
-		"next": "2",
+		"next": "-1",
 		"tagReveal": "JunkTag0"
 	},
 	{
 		"id": "1",
 		"question": "JunkQuestion1",
 		"answer": "JunkAnswer1",
-		"next": "2",
+		"next": "-1",
 		"tagReveal": ""
 	},
 	{
@@ -24,7 +24,7 @@
 		"id": "3",
 		"question": "JunkQuestion3",
 		"answer": "JunkAnswer3",
-		"next": "3",
+		"next": "-1",
 		"tagReveal": ""
 	},
 	{
