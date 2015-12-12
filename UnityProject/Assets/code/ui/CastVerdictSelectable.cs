@@ -18,7 +18,30 @@ public class CastVerdictSelectable : MonoBehaviour
 
   public void CastVerdict()
   {
-    Debug.Log("CASTING HOLY VENGEANCE OR SALVATION UPON THEE!");
+    if(verdict == Verdict.Absolution)
+    {
+      absolvePerson();
+    }
+    else
+    {
+      damnPerson();
+    }
+
+    judgeNewPerson();
+  }
+
+  void absolvePerson()
+  {
+    Debug.Log("YOU HAVE PASSED JUDGMENT MORTAL");
+  }
+
+  void damnPerson()
+  {
+    Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
+  }
+
+  void judgeNewPerson()
+  {
     // get a random index then get the corresponding judged person and set them
     int randomNumber = Random.Range(0, judgedPeople.Count - 1);
     //SetJudgedPerson(judgedPeople[randomNumber]);
