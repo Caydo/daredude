@@ -15,6 +15,7 @@ public class Judge : MonoBehaviour
   DataContainer dataContainer;
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
   [SerializeField] JudgedPersonDisplayImage[] JudgedPersonBodyParts = null;
+  List<JudgedPerson> JudgedSouls = new List<JudgedPerson>();
 
   IEnumerator Start()
   {
@@ -29,16 +30,31 @@ public class Judge : MonoBehaviour
 
   JudgedPerson getRandomPerson()
   {
-    int randomNumber = Random.Range(0, dataContainer.JudgedPeople.Count - 1);
-    JudgedPerson person = dataContainer.JudgedPeople[randomNumber];
-    return person;
+    JudgedPerson person = null;
+    List<int> availableIDs = new List<int>();
+    foreach(KeyValuePair<int, JudgedPerson> kvp in dataContainer.JudgedPeople)
+    {
+      availableIDs.Add(kvp.Value.ID);
+    }
+
+    int randomNumber = Random.Range(0, availableIDs.Count - 1);
+    person = dataContainer.JudgedPeople[availableIDs[randomNumber]];
+    
+    if(!JudgedSouls.Contains(person))
+    {
+      JudgedSouls.Add(person);
+      dataContainer.JudgedPeople.Remove(person.ID);
+      return person;
+    }
+
+    return null;
   }
 
   public void JudgeNewPerson()
   {
     displayJudgedTags.Tags.Clear();
     JudgedPerson person = getRandomPerson();
-    if(person != null)
+    if (person != null)
     {
       if (m_judgedName != null) m_judgedName.text = person.Name;
       if (m_judgedSpeechText != null) m_judgedSpeechText.text = person.StartText;
@@ -49,11 +65,15 @@ public class Judge : MonoBehaviour
       }
 
       cachedQuestionIDs = person.Questions;
-    }
 
-    foreach (JudgedPersonDisplayImage bodypart in JudgedPersonBodyParts)
+      foreach (JudgedPersonDisplayImage bodypart in JudgedPersonBodyParts)
+      {
+        bodypart.DisplayNewPerson(person);
+      }
+    }
+    else
     {
-      bodypart.DisplayNewPerson(person);
+      Debug.LogError("YOU RAN OUT OF PEOPLE TO JUDGE!!!!");
     }
   }
       
