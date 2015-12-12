@@ -11,21 +11,21 @@
 		"question": "JunkQuestion1",
 		"answer": "JunkAnswer1",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "JunkTag0"
 	},
 	{
 		"id": "2",
 		"question": "JunkQuestion2",
 		"answer": "JunkAnswer2",
 		"next": "3",
-		"tagReveal": ""
+		"tagReveal": "JunkTag0"
 	},
 	{
 		"id": "3",
 		"question": "JunkQuestion3",
 		"answer": "JunkAnswer3",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "JunkTag0"
 	},
 	{
 		"id": "4",

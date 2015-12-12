@@ -20,7 +20,7 @@ public class DisplayQuestionTextFromID : MonoBehaviour
 
   public void Update()
   {
-    if(cachedID != ID)
+    if(cachedID != ID && dataContainer != null && dataContainer.DataCollected)
     {
       cachedID = ID;
       GetComponent<Text>().text = (dataContainer.JudgeQuestions.ContainsKey(ID)) ? dataContainer.JudgeQuestions[ID].Question : string.Empty;

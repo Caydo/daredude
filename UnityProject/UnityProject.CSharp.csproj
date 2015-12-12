@@ -86,6 +86,7 @@
     <Compile Include="Assets\code\data\JudgeQuestion.cs" />
     <Compile Include="Assets\code\data\JudgedPerson.cs" />
     <Compile Include="Assets\code\ui\CastVerdictSelectable.cs" />
+    <Compile Include="Assets\code\ui\DisplayJudgedPersonTags.cs" />
     <Compile Include="Assets\code\ui\DisplayQuestionTextFromID.cs" />
     <Compile Include="Assets\code\ui\GamePanel.cs" />
     <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />

@@ -3,6 +3,7 @@ using Assets.code.data;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using Assets.code.ui;
 
 public class GamePanel : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class GamePanel : MonoBehaviour
   public List<DisplayQuestionTextFromID> m_questions;
   int[] cachedQuestionIDs = null;
   DataContainer dataContainer;
+  [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
 
   IEnumerator Start()
   {
@@ -27,12 +29,12 @@ public class GamePanel : MonoBehaviour
 
   public void JudgeNewPerson()
   {
+    displayJudgedTags.Tags.Clear();
     JudgedPerson person = getRandomPerson();
     if (person != null)
     {
       //if (m_judgedPortrait != null) m_judgedPortrait.sprite = ?
       if (m_judgedName != null) m_judgedName.text = person.Name;
-      UpdateTags(person.Tags);
       if (m_judgedSpeechText != null) m_judgedSpeechText.text = person.StartText;
       updateQuestions(person.Questions);
     }
@@ -41,7 +43,6 @@ public class GamePanel : MonoBehaviour
       // clear everything
       if(m_judgedPortrait != null) m_judgedPortrait.sprite = null;
       if (m_judgedName != null) m_judgedName.text = string.Empty;
-      UpdateTags(null);
       if (m_judgedSpeechText != null) m_judgedSpeechText.text = string.Empty;
       updateQuestions(null);
     }
@@ -53,42 +54,7 @@ public class GamePanel : MonoBehaviour
     JudgedPerson person = dataContainer.JudgedPeople[randomNumber];
     return person;
   }
-
-  void UpdateTags(string[] tags)
-  {
-    if (tags != null)
-    {
-      if (m_judgedTraits != null)
-      {
-        for (int traitsIndex = 0; traitsIndex < m_judgedTraits.Count; traitsIndex++)
-        {
-          if (m_judgedTraits[traitsIndex] != null)
-          {
-            if (tags.Length > traitsIndex)
-            {
-              m_judgedTraits[traitsIndex].text = tags[traitsIndex];
-            }
-            else
-            {
-              m_judgedTraits[traitsIndex].text = string.Empty;
-            }
-          }
-        }
-      }
-    }
-    else
-    {
-      // clear tags
-      if (m_judgedTraits != null)
-      {
-        for (int traitsIndex = 0; traitsIndex < m_judgedTraits.Count; traitsIndex++)
-        {
-          if (m_judgedTraits[traitsIndex] != null) m_judgedTraits[traitsIndex].text = string.Empty;
-        }
-      }
-    }
-  }
-    
+      
   void updateQuestions(int[] questionIDs)
   {
     for(int questionIndex = 0; questionIndex < m_questions.Count; questionIndex++)
@@ -122,5 +88,14 @@ public class GamePanel : MonoBehaviour
 
     // update answer
     m_judgedSpeechText.text = judgeQuestion.Answer;
+
+    // update tags
+    if (judgeQuestion.TagReveal != string.Empty)
+    {
+      if(!displayJudgedTags.Tags.Contains(judgeQuestion.TagReveal))
+      {
+        displayJudgedTags.Tags.Add(judgeQuestion.TagReveal);
+      }
+    }
   }
 }
