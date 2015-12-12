@@ -22,6 +22,7 @@ public class TrafficDirector : MonoBehaviour {
         {
             int maxIndex = roads.childCount;
             currentRoad = (currentRoad + 1 >= maxIndex) ? 0 : (currentRoad + 1);
+            transform.Rotate(0, 90, 0, Space.World);
         }
 
         if(Input.GetButtonUp("Fire2")) // fire 2 will be the toggle road type 
@@ -30,18 +31,9 @@ public class TrafficDirector : MonoBehaviour {
             road.currentPolicy = (road.currentPolicy == TrafficPolicy.Go) ? TrafficPolicy.Stop : TrafficPolicy.Go;
         }
 
-        // point toward our current road 
         Vector2 refVector = new Vector2(-1, 0); // x / z axis 
         if(CurrentRoad() != null)
         {
-            var roadPos = CurrentRoad().transform.position; 
-            var roadVector = new Vector2(roadPos.x, roadPos.z);
-            var rotation = Vector2.Angle(refVector, roadVector);
-
-            var curRotation = transform.rotation;
-            curRotation.y = rotation;
-            transform.rotation = curRotation;
-
             LaneStatus.sprite = (CurrentRoad().GetComponent<Road>().currentPolicy == TrafficPolicy.Go) ? GoSprite : StopSprite; 
         }
     }
