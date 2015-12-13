@@ -1,4 +1,5 @@
 using Assets.code.data;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,8 @@ public class JudgedPersonDisplayImage : MonoBehaviour
     Nose = 2,
     Mouth = 3,
     Eyebrows = 4,
-    Hair = 5
+    Hair = 5,
+    Head = 6
   }
   public BodyPart BodypartToDisplay = BodyPart.Eyes;
   const string EYES_ART_FILE_PREFIX = "art/characters/eyes/";
@@ -21,12 +23,13 @@ public class JudgedPersonDisplayImage : MonoBehaviour
   const string EYEBROWS_ART_FILE_PREFIX = "art/characters/eyebrows/";
   const string MOUTH_ART_FILE_PREFIX = "art/characters/mouth/";
   const string HAIR_ART_FILE_PREFIX = "art/characters/hair/";
+  const string HEAD_ART_FILE_PREFIX = "art/characters/heads/";
 
   public void DisplayNewPerson(JudgedPerson person)
   {
     string filePathForImage = string.Empty;
 
-    switch(BodypartToDisplay)
+    switch (BodypartToDisplay)
     {
       case BodyPart.Eyes:
         filePathForImage = string.Format("{0}{1}", EYES_ART_FILE_PREFIX, person.Eyes);
@@ -46,8 +49,13 @@ public class JudgedPersonDisplayImage : MonoBehaviour
       case BodyPart.Hair:
         filePathForImage = string.Format("{0}{1}", HAIR_ART_FILE_PREFIX, person.Hair);
         break;
+      case BodyPart.Head:
+      default:
+        filePathForImage = string.Format("{0}{1}", HEAD_ART_FILE_PREFIX, person.Hair);
+        break;
     }
 
-    GetComponent<Image>().sprite = Resources.Load<Sprite>(filePathForImage);
+    Image image = GetComponent<Image>();
+    image.sprite = Resources.Load<Sprite>(filePathForImage);
   }
 }
