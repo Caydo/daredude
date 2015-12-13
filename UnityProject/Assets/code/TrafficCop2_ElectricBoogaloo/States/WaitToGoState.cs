@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 
@@ -8,7 +8,7 @@ public class WaitToGoState : GoingState
     StateMachine stateMachine;
     Road road;
     Vehicle self;
-
+    [SerializeField] GameObject AngryIndicator = null;
 	void OnEnable () {
         stateMachine = transform.parent.GetComponent<StateMachine>();
         road = transform.parent.parent.parent.parent.GetComponent<Road>();
@@ -28,6 +28,11 @@ public class WaitToGoState : GoingState
          .Select(t => t.localPosition)
          .Select(t => directionMagnitude(t))
          .OrderBy(t => t);
+    
+        if(vehiclesBehind.Count() >= (threshold - 1) && !AngryIndicator.activeInHierarchy)
+        {
+          AngryIndicator.SetActive(true);  
+        }
 
         if((vehiclesBehind.Count() >= threshold) || (road.currentPolicy == TrafficPolicy.Go))
         {
