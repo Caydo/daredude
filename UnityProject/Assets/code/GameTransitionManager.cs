@@ -83,6 +83,11 @@ public class GameTransitionManager : MonoBehaviour
             }
             m_trafficCopVehicles.Clear();
         }
+        else
+        {
+            StingerText st = Finder.Find<StingerText>("Stinger");
+            st.Restart();
+        }
     }
     void ToggleStPeterPlease(bool enabled)
     {
