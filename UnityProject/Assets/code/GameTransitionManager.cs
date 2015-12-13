@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameTransitionManager : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class GameTransitionManager : MonoBehaviour
     void Start()
     {
         StartTrafficCopGame(true);
+    }
+
+  [SerializeField] string GameSceneName = "TrafficCop2BackInTheStreets";
+    public void ReloadGame()
+    {
+      SceneManager.LoadScene(GameSceneName);
     }
 
     public void StartTrafficCopGame(bool startOfGame = false)
