@@ -51,7 +51,7 @@ public class RateSpawnRules : SpawnRules
     public float rate; // secs between cars
     public string _type; 
 
-    int spawned = 0;
+    protected int spawned = 0;
 
     override protected string type()
     {
@@ -75,4 +75,71 @@ public class RateSpawnRules : SpawnRules
         return retval;
     }
 
+}
+
+
+
+public class SpawnRateBasedOnSuccess : RateSpawnRules
+{
+    SpawnController spawner;
+
+    SpawnController Spawner()
+    {
+        if(spawner == null)
+        {
+            spawner = Finder.Find<SpawnController>("GameController");
+        }
+        return spawner;
+    }
+
+    public override IEnumerable<Vehicle> SpawnVehicles(float timeElapsed)
+    {
+        var typeProbabilities = new List<ProbabilityTableEntry<string>>();
+        float newRate = 0f;
+        var successes = Spawner().successVehicles();
+        if(successes <= 5)
+        {
+            newRate = 5;
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(1f, "Slow-Short"));
+        } else if (successes <= 10)
+        {
+            newRate = 4;
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Slow-Short"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Short"));
+        } else if (successes <= 15)
+        {
+            newRate = 4;
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Short"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.75f, "Fast-Short"));
+        } else if (successes <= 20)
+        {
+            newRate = 3;
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Short"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Short"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long")); 
+        } else if (successes <= 25)
+        {
+            newRate = 3;
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Short"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Fast-Long")); 
+        } else 
+        {
+            newRate = 2;
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Fast-Short"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long"));
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Long")); 
+        }
+
+        if (rate != newRate)
+        {
+            rate = newRate;
+            _type = typeProbabilities.rollFromTable();
+            spawned = Mathf.FloorToInt(timeElapsed / rate); // don't want it to retroactively apply
+
+            Debug.Log(string.Format("setting new spawn rate {0} {1} {2}", rate, _type, spawned));
+        }
+
+        return base.SpawnVehicles(timeElapsed);
+    }
 }
