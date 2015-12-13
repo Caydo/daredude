@@ -70,6 +70,8 @@
      <Compile Include="Assets\code\ui\DisplayJudgedPersonTags.cs" />
      <Compile Include="Assets\code\ui\DisplayQuestionTextFromID.cs" />
      <Compile Include="Assets\code\ui\Judge.cs" />
+     <Compile Include="Assets\code\ui\JudgeReportCard.cs" />
+     <Compile Include="Assets\code\ui\JudgeStats.cs" />
      <Compile Include="Assets\code\ui\JudgedPersonDisplayImage.cs" />
      <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />
      <Compile Include="Assets\code\ui\VictoryConditionPanel.cs" />

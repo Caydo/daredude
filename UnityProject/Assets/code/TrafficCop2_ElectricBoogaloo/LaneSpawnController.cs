@@ -47,8 +47,11 @@ public class LaneSpawnController : MonoBehaviour {
             var newSpawns = rule.SpawnVehicles(timeElapsed); 
             foreach(Vehicle v in newSpawns)
             {
-                v.transform.SetParent(transform, false);
-                globalSpawnController.UpdateVehicleSpawned(v.type);
+                if (v != null)
+                {
+                    v.transform.SetParent(transform, false);
+                    globalSpawnController.UpdateVehicleSpawned(v.type);
+                }
             }
         }
     }

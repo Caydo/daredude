@@ -7,9 +7,9 @@ public abstract class SpawnRules
     protected abstract string type();
     public abstract IEnumerable<Vehicle> SpawnVehicles(float timeElapsed);
 
-    Vehicle prefab = null;
+    protected Vehicle prefab = null;
 
-    protected Vehicle spawn()
+    virtual protected Vehicle spawn()
     {
         Vehicle retval = null; 
 
@@ -92,52 +92,81 @@ public class SpawnRateBasedOnSuccess : RateSpawnRules
         return spawner;
     }
 
+    IList<ProbabilityTableEntry<string>> currentTypeProbabilities;
+    int currentEntry = 0; // completely arbitrary current entry id
+
+    protected override string type()
+    {
+        return currentTypeProbabilities.rollFromTable();
+    }
+
+    override protected Vehicle spawn()
+    {
+        if(Random.Range(0f,1f) < .25f)
+        {
+            return base.spawn();
+        } 
+        else
+        {
+            return null;
+        }
+    }
+
     public override IEnumerable<Vehicle> SpawnVehicles(float timeElapsed)
     {
         var typeProbabilities = new List<ProbabilityTableEntry<string>>();
         float newRate = 0f;
         var successes = Spawner().successVehicles();
+        var newEntry = 0;
         if(successes <= 5)
         {
-            newRate = 5;
+            newRate = 1.25f;
             typeProbabilities.Add(new ProbabilityTableEntry<string>(1f, "Slow-Short"));
+            newEntry = 1;
         } else if (successes <= 10)
         {
-            newRate = 4;
+            newRate = 1;
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Slow-Short"));
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Short"));
+            newEntry = 2;
         } else if (successes <= 15)
         {
-            newRate = 4;
+            newRate = 1;
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Short"));
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.75f, "Fast-Short"));
+            newEntry = 3;
         } else if (successes <= 20)
         {
-            newRate = 3;
+            newRate = .75f;
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Short"));
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Short"));
-            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long")); 
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long"));
+            newEntry = 4;
         } else if (successes <= 25)
         {
-            newRate = 3;
+            newRate = .75f;
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Short"));
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long"));
-            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Fast-Long")); 
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Fast-Long"));
+            newEntry = 5;
         } else 
         {
-            newRate = 2;
+            newRate = .5f;
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Fast-Short"));
             typeProbabilities.Add(new ProbabilityTableEntry<string>(.25f, "Slow-Long"));
-            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Long")); 
+            typeProbabilities.Add(new ProbabilityTableEntry<string>(.5f, "Fast-Long"));
+            newEntry = 6;
         }
 
-        if (rate != newRate)
+        if (currentEntry != newEntry)
         {
             rate = newRate;
-            _type = typeProbabilities.rollFromTable();
+            currentTypeProbabilities = typeProbabilities;
             spawned = Mathf.FloorToInt(timeElapsed / rate); // don't want it to retroactively apply
+            prefab = null;
+            currentEntry = newEntry;
 
-            Debug.Log(string.Format("setting new spawn rate {0} {1} {2}", rate, _type, spawned));
+            //Debug.Log(string.Format("setting new spawn rate {0} {1} {2}", rate, _type, spawned));
         }
 
         return base.SpawnVehicles(timeElapsed);

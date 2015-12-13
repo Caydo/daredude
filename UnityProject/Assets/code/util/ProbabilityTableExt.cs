@@ -19,7 +19,7 @@ public static class ProbabilityTableExt {
     {
         var sortedList = table.OrderBy(p => p.probability);
         var retval = sortedList.First();
-        var roll = Random.Range(0, 1);
+        float roll = Random.Range(0f, 1f);
         var rangeUsed = 0f;
         foreach(var tableEntry in sortedList.Skip(1))
         {

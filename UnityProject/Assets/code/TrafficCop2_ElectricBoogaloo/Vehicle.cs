@@ -5,6 +5,7 @@ using System.Linq;
 public class Vehicle : MonoBehaviour {
     public float acceleration;
     public float velocity; // game coords / sec
+    public float maxVelocity;
     public string type = "Car";
 
     public static Vector3 FORWARD_DIRECTION = new Vector3(0, 0, 1);
@@ -19,6 +20,7 @@ public class Vehicle : MonoBehaviour {
             .Where(t => t != null)
             .First();
         game = Finder.Find<SpawnController>("GameController");
+        maxVelocity = acceleration * 10;
     }
 
     public void Succeed()
