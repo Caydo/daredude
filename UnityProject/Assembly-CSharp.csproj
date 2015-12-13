@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\code\GameTransitionManager.cs" />
      <Compile Include="Assets\code\States\StateMachine.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\EndConditions.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Lane.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\WaitToGoState.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\TrafficDirector.cs" />
      <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Vehicle.cs" />
+     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\VirtualButton.cs" />
      <Compile Include="Assets\code\data\AdditionalDataPiece.cs" />
      <Compile Include="Assets\code\data\DataContainer.cs" />
      <Compile Include="Assets\code\data\DataPiece.cs" />
@@ -74,6 +76,7 @@
      <Compile Include="Assets\code\ui\JudgeStats.cs" />
      <Compile Include="Assets\code\ui\JudgedPersonDisplayImage.cs" />
      <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />
+     <Compile Include="Assets\code\ui\StingerText.cs" />
      <Compile Include="Assets\code\ui\VictoryConditionPanel.cs" />
      <Compile Include="Assets\code\util\Finder.cs" />
      <Compile Include="Assets\code\util\ProbabilityTableExt.cs" />
