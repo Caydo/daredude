@@ -1,5 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class CastVerdictSelectable : MonoBehaviour
 {
   public enum Verdict
@@ -13,7 +16,10 @@ public class CastVerdictSelectable : MonoBehaviour
   public GameTransitionManager gameTransitionManager;
   DataContainer dataContainer;
 
-  IEnumerator Start()
+    public List<Button> lockDisableButtons;
+    public AudioSource audioSource;
+
+    IEnumerator Start()
   {
     dataContainer = GameObject.FindWithTag("DataContainer").GetComponent<DataContainer>();
     while (!dataContainer.DataCollected)
@@ -26,34 +32,86 @@ public class CastVerdictSelectable : MonoBehaviour
   {
     if(verdict == Verdict.Absolution)
     {
-      absolvePerson();
+      StartCoroutine(absolvePerson());
     }
     else
     {
-      damnPerson();
+      StartCoroutine(damnPerson());
     }
 
-    if(dataContainer.JudgedPeople.Count > 0)
+  }
+
+    IEnumerator absolvePerson()
     {
-      gameTransitionManager.StartTrafficCopGame();
-     }
-    else
-    {
-      judgeReportCard.SetActive(true);
+        LockButtons();
+        audioSource.Play();
+        while (audioSource.isPlaying)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        UnlockButtons();
+        //Debug.Log("YOU'RE AWESOME! GO TO HEAVEN!");
+        judge.CurrentJudgedPerson.Damned = false;
+
+        if (dataContainer.JudgedPeople.Count > 0)
+        {
+            gameTransitionManager.StartTrafficCopGame();
+        }
+        else
+        {
+            judgeReportCard.SetActive(true);
+        }
+
+        judge.JudgeNewPerson();
     }
 
-    judge.JudgeNewPerson();
-  }
+    IEnumerator damnPerson()
+    {
+        LockButtons();
+        audioSource.Play();
+        while (audioSource.isPlaying)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
 
-  void absolvePerson()
-  {
-    //Debug.Log("YOU'RE AWESOME! GO TO HEAVEN!");
-    judge.CurrentJudgedPerson.Damned = false;
-  }
+        UnlockButtons();
+        //Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
+        judge.CurrentJudgedPerson.Damned = true;
 
-  void damnPerson()
-  {
-    //Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
-    judge.CurrentJudgedPerson.Damned = true;
-  }
+        if (dataContainer.JudgedPeople.Count > 0)
+        {
+            gameTransitionManager.StartTrafficCopGame();
+        }
+        else
+        {
+            judgeReportCard.SetActive(true);
+        }
+
+        judge.JudgeNewPerson();
+    }
+
+    void LockButtons()
+    {
+        if (lockDisableButtons != null)
+        {
+            for (int i = 0; i < lockDisableButtons.Count; i++)
+            {
+                if (lockDisableButtons[i] != null)
+                    lockDisableButtons[i].interactable = false;
+            }
+        }
+    }
+
+    void UnlockButtons()
+    {
+        if (lockDisableButtons != null)
+        {
+            for (int i = 0; i < lockDisableButtons.Count; i++)
+            {
+                if (lockDisableButtons[i] != null)
+                    lockDisableButtons[i].interactable = true;
+            }
+        }
+    }
 }
