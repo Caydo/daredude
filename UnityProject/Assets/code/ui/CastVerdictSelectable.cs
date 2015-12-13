@@ -33,19 +33,14 @@ public class CastVerdictSelectable : MonoBehaviour
       damnPerson();
     }
 
-    if(gameTransitionManager != null)
+    if(dataContainer.JudgedPeople.Count > 0)
     {
-      if(dataContainer.JudgedPeople.Count > 0)
-      {
-        gameTransitionManager.StartTrafficCopGame();
-      }
-      else
-      {
-        judgeReportCard.SetActive(true);
-      }
+      gameTransitionManager.StartTrafficCopGame();
+     }
+    else
+    {
+      judgeReportCard.SetActive(true);
     }
-
-    judge.JudgeNewPerson();
   }
 
   void absolvePerson()
