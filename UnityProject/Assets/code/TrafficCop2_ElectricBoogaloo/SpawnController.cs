@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic; 
@@ -83,6 +83,7 @@ public class SpawnController : MonoBehaviour {
         bool gotFail = endConditions.Select(cond => cond.checkFailure(this)).Aggregate((soFar, next) => soFar || next);
         if(gotFail)
         {
+            failVehicleTypes.Clear();
             gameTransitionManager.StartStPeterPleaseGame();
         }
 
