@@ -3,17 +3,38 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class VirtualButton : MonoBehaviour {
-    bool m_rotate = true;
+    public enum eButtonType
+    {
+        Fire1,
+        Fire2
+    }
+    public eButtonType m_buttonType;
+    public Button m_button;
+    public TrafficDirector m_trafficDirector;
+    void Start()
+    {
+        if (m_button != null)
+        {
+#if UNITY_ANDROID
+            m_button.enabled = true;
+#else
+            m_button.enabled = false;
+#endif
+        }
+    }
 
     public void OnPress()
     {
-        if(m_rotate)
+        switch (m_buttonType)
         {
-
-        }
-        else
-        {
-
+            case eButtonType.Fire1:
+                m_trafficDirector.OnFire1();
+                break;
+            case eButtonType.Fire2:
+                m_trafficDirector.OnFire2();
+                break;
+            default:
+                break;
         }
     }
 }

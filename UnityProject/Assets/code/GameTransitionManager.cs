@@ -15,6 +15,9 @@ public class GameTransitionManager : MonoBehaviour
 
     public Animation m_cameraAnimation;
 
+    public List<AudioSource> m_trafficCopLoops;
+    public List<AudioSource> m_stPetersPleaseLoops;
+
     void Start()
     {
         StartTrafficCopGame(true);
@@ -78,6 +81,25 @@ public class GameTransitionManager : MonoBehaviour
                     m_trafficCopGame[i].gameObject.SetActive(enabled);
             }
         }
+
+        if (m_trafficCopLoops != null)
+        {
+            for (int i = 0; i < m_trafficCopLoops.Count; i++)
+            {
+                if (m_trafficCopLoops[i] != null)
+                {
+                    if(enabled)
+                    {
+                        m_trafficCopLoops[i].Play();
+                    }
+                    else
+                    {
+                        m_trafficCopLoops[i].Stop();
+                    }
+                }
+            }
+        }
+
         if (!enabled)
         {
             for (int i = 0; i < m_trafficCopVehicles.Count; i++)
@@ -102,6 +124,24 @@ public class GameTransitionManager : MonoBehaviour
             {
                 if (m_stPeterPleaseGame[i] != null)
                     m_stPeterPleaseGame[i].gameObject.SetActive(enabled);
+            }
+        }
+
+        if (m_stPetersPleaseLoops != null)
+        {
+            for (int i = 0; i < m_stPetersPleaseLoops.Count; i++)
+            {
+                if (m_stPetersPleaseLoops[i] != null)
+                {
+                    if (enabled)
+                    {
+                        m_stPetersPleaseLoops[i].Play();
+                    }
+                    else
+                    {
+                        m_stPetersPleaseLoops[i].Stop();
+                    }
+                }
             }
         }
     }
