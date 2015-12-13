@@ -73,6 +73,7 @@
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Lane.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\LaneSpawnController.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Road.cs" />
+    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\SetColorToRandom.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\SpawnController.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\SpawnRules.cs" />
     <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\CollideState.cs" />
