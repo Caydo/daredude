@@ -22,13 +22,5 @@ namespace Assets.code.ui
       reportCardText.enabled = true;
       buttonText.text = "DONE";
     }
-
-    /// <summary>
-    /// Called via event system
-    /// </summary>
-    public void GoToScene(string sceneToGoTo)
-    {
-      SceneManager.LoadScene(sceneToGoTo);
-    }
   }
 }
