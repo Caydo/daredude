@@ -4,19 +4,23 @@ using UnityEngine.UI;
 
 namespace Assets.code.ui
 {
-  [RequireComponent(typeof(Image))]
-  [RequireComponent(typeof(Button))]
   public class JudgeReportCard : MonoBehaviour
   {
+    [SerializeField] Image backgroundImage = null;
     [SerializeField] Text reportCardText = null;
+    [SerializeField] Button button = null;
+    [SerializeField] Image image = null;
+    [SerializeField] Text buttonText = null;
     [SerializeField] JudgeStats judgeStats = null;
 
     public void DisplayReportCard()
     {
-      GetComponent<Image>().enabled = true;
-      GetComponent<Button>().enabled = true;
+      backgroundImage.enabled = true;
+      image.enabled = true;
+      button.enabled = true;
       reportCardText.text = judgeStats.GetFullStatsText();
       reportCardText.enabled = true;
+      buttonText.text = "DONE";
     }
 
     /// <summary>
