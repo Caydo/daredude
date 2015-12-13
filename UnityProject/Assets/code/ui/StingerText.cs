@@ -8,6 +8,9 @@ public class StingerText : MonoBehaviour {
     public float fadeDown;
     public float hold; 
     public float fadeOut;
+    public int timesCalled = -1;
+
+    public string[] trafficCopNames; // replace %n in strings
 
     TextMesh text; 
 
@@ -25,6 +28,9 @@ public class StingerText : MonoBehaviour {
         fadeDown = .2f;
         hold = 5f;
         fadeOut = 1f;
+        timesCalled += 1;
+
+        text.text = trafficCopNames[timesCalled].Replace(":", ":\n");
     }
 
 	void Update () {
