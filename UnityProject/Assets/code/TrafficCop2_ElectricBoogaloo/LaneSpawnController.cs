@@ -50,7 +50,7 @@ public class LaneSpawnController : MonoBehaviour {
                 if (v != null)
                 {
                     v.transform.SetParent(transform, false);
-                    globalSpawnController.UpdateVehicleSpawned(v.type);
+                    globalSpawnController.UpdateVehicleSpawned(v.type, v.gameObject);
                 }
             }
         }

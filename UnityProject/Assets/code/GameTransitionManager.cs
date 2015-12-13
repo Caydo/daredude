@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -10,6 +10,8 @@ public class GameTransitionManager : MonoBehaviour
 
     public List<GameObject> m_trafficCopGame;
     public List<GameObject> m_stPeterPleaseGame;
+
+    public List<GameObject> m_trafficCopVehicles = new List<GameObject>();
 
     void Start()
     {
@@ -71,6 +73,15 @@ public class GameTransitionManager : MonoBehaviour
                 if (m_trafficCopGame[i] != null)
                     m_trafficCopGame[i].gameObject.SetActive(enabled);
             }
+        }
+        if (!enabled)
+        {
+            for (int i = 0; i < m_trafficCopVehicles.Count; i++)
+            {
+                if (m_trafficCopVehicles[i] != null)
+                    GameObject.Destroy(m_trafficCopVehicles[i].gameObject);
+            }
+            m_trafficCopVehicles.Clear();
         }
     }
     void ToggleStPeterPlease(bool enabled)

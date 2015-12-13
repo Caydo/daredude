@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic; 
@@ -48,9 +48,10 @@ public class SpawnController : MonoBehaviour {
         // done testing
     }
 
-    public void UpdateVehicleSpawned(string type)
+    public void UpdateVehicleSpawned(string type, GameObject spawnedVehicle)
     {
         spawnedVehicleTypes.Add(type);
+        gameTransitionManager.m_trafficCopVehicles.Add(spawnedVehicle);
     }
 
     public void UpdateVehicleSucceeded(string type)
@@ -71,7 +72,7 @@ public class SpawnController : MonoBehaviour {
             var lane = randomRoad.Cast<Transform>().Where(t => !t.GetComponent<Lane>().allowEntry).First();
             Vehicle newVehicle = (Vehicle)Instantiate(carPrefab);
             newVehicle.transform.SetParent(lane, false);
-            UpdateVehicleSpawned(newVehicle.type);
+            UpdateVehicleSpawned(newVehicle.type, newVehicle.gameObject);
         }
 
         bool gotSuccess = endConditions.Select(cond => cond.checkSuccess(this)).Aggregate((soFar, next) => soFar || next);
