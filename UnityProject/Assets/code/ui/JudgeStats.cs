@@ -25,16 +25,13 @@ namespace Assets.code.ui
         for(int i = 0; i < person.Tags.Length; i++)
         {
           string tag = person.Tags[i];
-          if(TagsFromJudged.ContainsKey(tag))
+          if(!tagsToCount.ContainsKey(tag))
           {
-            if(!tagsToCount.ContainsKey(tag))
-            {
-              tagsToCount.Add(tag, 1);
-            }
-            else
-            {
-              tagsToCount[tag]++;
-            }
+            tagsToCount.Add(tag, 1);
+          }
+          else
+          {
+            tagsToCount[tag]++;
           }
         }
       }
@@ -43,8 +40,9 @@ namespace Assets.code.ui
       {
         string tagName = kvp.Key;
         string totalJudgedAvailableWithTag = kvp.Value.ToString();
-        
-        statsText += string.Format("{0}: {1}/{2}\n", kvp.Key, TagsFromJudged[kvp.Key], totalJudgedAvailableWithTag);
+        int discoveredTags = (TagsFromJudged.ContainsKey(kvp.Key)) ? TagsFromJudged[kvp.Key] : 0;
+
+        statsText += string.Format("{0}: {1}/{2}\n", kvp.Key, discoveredTags.ToString(), totalJudgedAvailableWithTag);
       }
 
       return statsText;
