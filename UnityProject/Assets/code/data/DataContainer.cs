@@ -16,7 +16,6 @@ public class DataContainer : MonoBehaviour
 
   void Start()
   {
-    DontDestroyOnLoad(this);
     getData();
   }
 

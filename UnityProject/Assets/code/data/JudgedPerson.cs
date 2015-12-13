@@ -30,5 +30,6 @@ namespace Assets.code.data
     public string Eyebrows;
     [JsonName("hair")]
     public string Hair;
+    public bool Damned = false;
   }
 }

@@ -8,6 +8,9 @@ namespace Assets.code.ui
   {
     public List<JudgedPerson> JudgedPeople = new List<JudgedPerson>();
     public Dictionary<string, int> TagsFromJudged = new Dictionary<string, int>();
+    int damnedCount = 0;
+    int absolvedCount = 0;
+
     void Start()
     {
       JudgedPeople.Clear();
@@ -22,6 +25,15 @@ namespace Assets.code.ui
 
       foreach (JudgedPerson person in JudgedPeople)
       {
+        if(person.Damned)
+        {
+          damnedCount++;
+        }
+        else
+        {
+          absolvedCount++;
+        }
+
         for(int i = 0; i < person.Tags.Length; i++)
         {
           string tag = person.Tags[i];
@@ -36,7 +48,10 @@ namespace Assets.code.ui
         }
       }
 
-      foreach(KeyValuePair<string, int> kvp in tagsToCount)
+      statsText += string.Format("Damned Souls: {0}\n", damnedCount);
+      statsText += string.Format("Absolved Souls: {0}\n", absolvedCount);
+
+      foreach (KeyValuePair<string, int> kvp in tagsToCount)
       {
         string tagName = kvp.Key;
         string totalJudgedAvailableWithTag = kvp.Value.ToString();

@@ -7,7 +7,7 @@ public class CastVerdictSelectable : MonoBehaviour
     Absolution
   }
   [SerializeField] Verdict verdict = Verdict.Absolution;
-  [SerializeField] Judge gamePanel = null;
+  [SerializeField] Judge judge = null;
 
   public void CastVerdict()
   {
@@ -20,16 +20,18 @@ public class CastVerdictSelectable : MonoBehaviour
       damnPerson();
     }
 
-    gamePanel.JudgeNewPerson();
+    judge.JudgeNewPerson();
   }
 
   void absolvePerson()
   {
     //Debug.Log("YOU'RE AWESOME! GO TO HEAVEN!");
+    judge.CurrentJudgedPerson.Damned = false;
   }
 
   void damnPerson()
   {
     //Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
+    judge.CurrentJudgedPerson.Damned = true;
   }
 }
