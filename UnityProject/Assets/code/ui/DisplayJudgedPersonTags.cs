@@ -33,9 +33,10 @@ namespace Assets.code.ui
 
     void createTag(string tag)
     {
-      GameObject newTagObject = (GameObject)Instantiate(TagPrefab, transform.localPosition, Quaternion.identity);
+      GameObject newTagObject = (GameObject)Instantiate(TagPrefab, transform.position, Quaternion.identity);
       newTagObject.transform.SetParent(transform);
       newTagObject.transform.localScale = Vector3.one;
+      newTagObject.transform.localEulerAngles = Vector3.zero;
       newTagObject.GetComponent<Text>().text = tag;
       TagObjects.Add(newTagObject);
 
