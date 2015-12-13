@@ -30,7 +30,15 @@ public class StingerText : MonoBehaviour {
         fadeOut = 1f;
         timesCalled += 1;
 
-        text.text = trafficCopNames[timesCalled].Replace(":", ":\n");
+        if(timesCalled == 1)
+        {
+            text.text = trafficCopNames[timesCalled].Replace(":", ":\n");
+        }
+        else
+        {
+            var selectedIndex = Random.Range(2, 9);
+            text.text = trafficCopNames[selectedIndex].Replace(":", ":\n").Replace("%n", timesCalled.ToString());
+        }
     }
 
 	void Update () {
