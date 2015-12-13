@@ -41,6 +41,8 @@ public class CastVerdictSelectable : MonoBehaviour
     {
       judgeReportCard.SetActive(true);
     }
+
+    judge.JudgeNewPerson();
   }
 
   void absolvePerson()
