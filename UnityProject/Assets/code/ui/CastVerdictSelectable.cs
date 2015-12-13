@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 public class CastVerdictSelectable : MonoBehaviour
 {
@@ -8,8 +9,18 @@ public class CastVerdictSelectable : MonoBehaviour
   }
   [SerializeField] Verdict verdict = Verdict.Absolution;
   [SerializeField] Judge judge = null;
-
+  [SerializeField] GameObject judgeReportCard = null;
   public GameTransitionManager gameTransitionManager;
+  DataContainer dataContainer;
+
+  IEnumerator Start()
+  {
+    dataContainer = GameObject.FindWithTag("DataContainer").GetComponent<DataContainer>();
+    while (!dataContainer.DataCollected)
+    {
+      yield return null;
+    }
+  }
 
   public void CastVerdict()
   {
@@ -22,7 +33,17 @@ public class CastVerdictSelectable : MonoBehaviour
       damnPerson();
     }
 
-    if(gameTransitionManager != null) gameTransitionManager.StartTrafficCopGame();
+    if(gameTransitionManager != null)
+    {
+      if(dataContainer.JudgedPeople.Count > 0)
+      {
+        gameTransitionManager.StartTrafficCopGame();
+      }
+      else
+      {
+        judgeReportCard.SetActive(true);
+      }
+    }
 
     judge.JudgeNewPerson();
   }
