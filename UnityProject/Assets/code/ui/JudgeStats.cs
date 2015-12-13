@@ -1,6 +1,7 @@
 using Assets.code.data;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Assets.code.ui
 {
@@ -11,20 +12,22 @@ namespace Assets.code.ui
     int damnedCount = 0;
     int absolvedCount = 0;
 
+    Dictionary<string, int> absolvedTags = new Dictionary<string, int>();
+    Dictionary<string, int> allTags = new Dictionary<string, int>();
+
     void Start()
     {
       JudgedPeople.Clear();
     }
 
-    public string GetFullStatsText()
+    public void CompileStats()
     {
-      string statsText = string.Empty;
-      Dictionary<string, int> absolvedTags = new Dictionary<string, int>();
-      Dictionary<string, int> allTags = new Dictionary<string, int>();
+      absolvedTags = new Dictionary<string, int>();
+      allTags = new Dictionary<string, int>();
 
       foreach (JudgedPerson person in JudgedPeople)
       {
-        if(person.Damned)
+        if (person.Damned)
         {
           damnedCount++;
         }
@@ -58,13 +61,16 @@ namespace Assets.code.ui
           }
         }
       }
+    }
 
-      statsText += string.Format("Damned Souls: {0}\n", damnedCount);
-      statsText += string.Format("Absolved Souls: {0}\n", absolvedCount);
-
-      statsText += "The kind of people you let into Heaven:\n";
-      foreach (KeyValuePair<string, int> kvp in allTags)
+    public string GetFullStatsText(int index)
+    {
+      string statsText = string.Empty;
+    
+      // only do 5 tags at a time
+      for(int i = index; i < index + 5; i++)
       {
+        KeyValuePair<string, int> kvp = allTags.ElementAt(i);
         string tagName = kvp.Key;
         string totalJudgedAvailableWithTag = kvp.Value.ToString();
         int absolvedCountForTag = (absolvedTags.ContainsKey(kvp.Key)) ? absolvedTags[kvp.Key] : 0;

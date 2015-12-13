@@ -5,12 +5,17 @@ namespace Assets.code.ui
 {
   public class JudgeReportCard : MonoBehaviour
   {
-    [SerializeField] Text reportCardText = null;
+    [SerializeField] Text[] reportCardTextColumns = null;
     [SerializeField] JudgeStats judgeStats = null;
+    int incrementAmount = 5;
 
     public void OnEnable()
     {
-      reportCardText.text = judgeStats.GetFullStatsText();
+      judgeStats.CompileStats();
+      for (int i = 0; i < reportCardTextColumns.Length; i++)
+      {
+        reportCardTextColumns[i].text = judgeStats.GetFullStatsText(i * incrementAmount);
+      }
     }
   }
 }
