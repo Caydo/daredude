@@ -45,10 +45,11 @@ public class CastVerdictSelectable : MonoBehaviour
     {
         LockButtons();
         audioSource.Play();
-        while (audioSource.isPlaying)
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
+        //while (audioSource.isPlaying)
+        //{
+        //    yield return new WaitForSeconds(0.5f);
+        //}
+        yield return new WaitForSeconds(1f);
 
         UnlockButtons();
         //Debug.Log("YOU'RE AWESOME! GO TO HEAVEN!");
@@ -70,10 +71,11 @@ public class CastVerdictSelectable : MonoBehaviour
     {
         LockButtons();
         audioSource.Play();
-        while (audioSource.isPlaying)
-        {
-            yield return new WaitForSeconds(0.5f);
-        }
+        //while (audioSource.isPlaying)
+        //{
+        //    yield return new WaitForSeconds(0.5f);
+        //}
+        yield return new WaitForSeconds(1f);
 
         UnlockButtons();
         //Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
