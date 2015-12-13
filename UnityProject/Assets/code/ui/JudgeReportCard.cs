@@ -9,9 +9,9 @@ namespace Assets.code.ui
     [SerializeField] Text AbsolvedText = null;
     [SerializeField] Text DamnedText = null;
     [SerializeField] Text[] reportCardTextColumns = null;
+    [SerializeField] Text savedCarsText = null;
     [SerializeField] JudgeStats judgeStats = null;
     int incrementAmount = 5;
-
     public void OnEnable()
     {
       int damnedCount = 0;
@@ -36,6 +36,8 @@ namespace Assets.code.ui
       {
         reportCardTextColumns[i].text = judgeStats.GetFullStatsText(i * incrementAmount);
       }
+
+      savedCarsText.text = string.Format("Mortal Vehicles Saved From Judgment: {0}", Finder.Find<SpawnController>("GameController").successVehicles());
     }
   }
 }
