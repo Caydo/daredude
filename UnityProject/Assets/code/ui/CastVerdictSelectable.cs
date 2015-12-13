@@ -22,7 +22,7 @@ public class CastVerdictSelectable : MonoBehaviour
       damnPerson();
     }
 
-    gameTransitionManager.StartTrafficCopGame();
+    if(gameTransitionManager != null) gameTransitionManager.StartTrafficCopGame();
 
     judge.JudgeNewPerson();
   }
