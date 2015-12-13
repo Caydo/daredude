@@ -50,20 +50,6 @@ public class GameTransitionManager : MonoBehaviour
         //disable st peter
         ToggleStPeterPlease(false);
 
-        //start traffic cop ambience early
-        if (m_trafficCopLoops != null)
-        {
-            for (int i = 0; i < m_trafficCopLoops.Count; i++)
-            {
-                if (m_trafficCopLoops[i] != null)
-                {
-                    m_trafficCopLoops[i].Play();
-                }
-            }
-        }
-
-
-
         //pan down
         m_cameraAnimation.Play("CameraPanDown");
         yield return new WaitForSeconds(2f);
