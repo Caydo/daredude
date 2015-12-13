@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class StingerText : MonoBehaviour {
@@ -29,6 +29,11 @@ public class StingerText : MonoBehaviour {
         hold = 5f;
         fadeOut = 1f;
         timesCalled += 1;
+
+        if (text == null)
+        {
+          text = GetComponent<TextMesh>();
+        }
 
         if(timesCalled == 1)
         {
