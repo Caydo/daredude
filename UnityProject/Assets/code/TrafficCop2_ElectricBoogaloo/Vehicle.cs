@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Linq;
 
@@ -46,6 +46,7 @@ public class Vehicle : MonoBehaviour {
                 .First();
             if (otherStateMachine.CurrentState == "Go")
             {
+                GetComponent<AudioSource>().Play();
                 otherStateMachine.GoTo("Collide");
                 stateMachine.GoTo("Collide");
             }

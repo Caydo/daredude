@@ -75,7 +75,7 @@ namespace Assets.code.ui
         string totalJudgedAvailableWithTag = kvp.Value.ToString();
         int absolvedCountForTag = (absolvedTags.ContainsKey(kvp.Key)) ? absolvedTags[kvp.Key] : 0;
 
-        statsText += string.Format("{0}: {1}/{2}\n", kvp.Key, absolvedCountForTag.ToString(), totalJudgedAvailableWithTag);
+        statsText += string.Format("{0}: {1}/{2}\n", tagName, absolvedCountForTag.ToString(), totalJudgedAvailableWithTag);
       }
 
       return statsText;
