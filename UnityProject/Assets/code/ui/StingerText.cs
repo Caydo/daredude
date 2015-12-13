@@ -41,7 +41,11 @@ public class StingerText : MonoBehaviour {
         }
         else
         {
-            var selectedIndex = Random.Range(2, 9);
+            var selectedIndex = 0;
+            do {
+                selectedIndex = Random.Range(2, 9);
+            } while (trafficCopNames[selectedIndex] == ""); 
+
             text.text = trafficCopNames[selectedIndex].Replace(":", ":\n").Replace("%n", timesCalled.ToString());
         }
     }
