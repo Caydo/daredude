@@ -62,6 +62,7 @@ namespace Assets.code.ui
       statsText += string.Format("Damned Souls: {0}\n", damnedCount);
       statsText += string.Format("Absolved Souls: {0}\n", absolvedCount);
 
+      statsText += "The kind of people you let into Heaven:\n";
       foreach (KeyValuePair<string, int> kvp in allTags)
       {
         string tagName = kvp.Key;
