@@ -16,7 +16,7 @@ public class Judge : MonoBehaviour
   DataContainer dataContainer;
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
   [SerializeField] JudgedPersonDisplayImage[] JudgedPersonBodyParts = null;
-  [SerializeField] JudgeReportCard judgeReportCard = null;
+  [SerializeField] GameObject judgeReportCard = null;
   public JudgedPerson CurrentJudgedPerson = null;
 
   IEnumerator Start()
@@ -76,7 +76,7 @@ public class Judge : MonoBehaviour
     }
     else
     {
-      judgeReportCard.DisplayReportCard();
+      judgeReportCard.SetActive(true);
     }
   }
       
