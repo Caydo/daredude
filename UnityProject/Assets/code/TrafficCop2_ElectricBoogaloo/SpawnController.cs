@@ -66,14 +66,14 @@ public class SpawnController : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetButtonUp("Fire3"))
-        {
-            Transform randomRoad = roads.RandomElement<Transform>();
-            var lane = randomRoad.Cast<Transform>().Where(t => !t.GetComponent<Lane>().allowEntry).First();
-            Vehicle newVehicle = (Vehicle)Instantiate(carPrefab);
-            newVehicle.transform.SetParent(lane, false);
-            UpdateVehicleSpawned(newVehicle.type, newVehicle.gameObject);
-        }
+        //if(Input.GetButtonUp("Fire3"))
+        //{
+        //    Transform randomRoad = roads.RandomElement<Transform>();
+        //    var lane = randomRoad.Cast<Transform>().Where(t => !t.GetComponent<Lane>().allowEntry).First();
+        //    Vehicle newVehicle = (Vehicle)Instantiate(carPrefab);
+        //    newVehicle.transform.SetParent(lane, false);
+        //    UpdateVehicleSpawned(newVehicle.type, newVehicle.gameObject);
+        //}
 
         bool gotSuccess = endConditions.Select(cond => cond.checkSuccess(this)).Aggregate((soFar, next) => soFar || next);
         if(gotSuccess)
