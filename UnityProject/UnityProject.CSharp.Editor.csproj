@@ -5,21 +5,19 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F5F9D48D-6914-C6F2-CF81-CF8D045EAAD0}</ProjectGuid>
+    <ProjectGuid>{763E01C1-30A1-6A95-047A-9420BA4E2B39}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.3.0f4</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -53,58 +51,54 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.EditorTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.EditorTestsRunner.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="JsonFx.Json">
       <HintPath>Assets\dlls\JsonFx.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\code\GameTransitionManager.cs" />
-    <Compile Include="Assets\code\States\StateMachine.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\EndConditions.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Lane.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\LaneSpawnController.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Road.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\SpawnController.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\SpawnRules.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\CollideState.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\EnterQueueState.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\GoState.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\GoingState.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\States\WaitToGoState.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\TrafficDirector.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\Vehicle.cs" />
-    <Compile Include="Assets\code\TrafficCop2_ElectricBoogaloo\VirtualButton.cs" />
-    <Compile Include="Assets\code\data\AdditionalDataPiece.cs" />
-    <Compile Include="Assets\code\data\DataContainer.cs" />
-    <Compile Include="Assets\code\data\DataPiece.cs" />
-    <Compile Include="Assets\code\data\JSONFileDataPiece.cs" />
-    <Compile Include="Assets\code\data\JSONUtil.cs" />
-    <Compile Include="Assets\code\data\JudgeQuestion.cs" />
-    <Compile Include="Assets\code\data\JudgedPerson.cs" />
-    <Compile Include="Assets\code\ui\CastVerdictSelectable.cs" />
-    <Compile Include="Assets\code\ui\DisplayJudgedPersonTags.cs" />
-    <Compile Include="Assets\code\ui\DisplayQuestionTextFromID.cs" />
-    <Compile Include="Assets\code\ui\GoToSceneButton.cs" />
-    <Compile Include="Assets\code\ui\Judge.cs" />
-    <Compile Include="Assets\code\ui\JudgeReportCard.cs" />
-    <Compile Include="Assets\code\ui\JudgeStats.cs" />
-    <Compile Include="Assets\code\ui\JudgedPersonDisplayImage.cs" />
-    <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />
-    <Compile Include="Assets\code\ui\PlayRandomAudioSource.cs" />
-    <Compile Include="Assets\code\ui\StingerText.cs" />
-    <Compile Include="Assets\code\ui\VictoryConditionPanel.cs" />
-    <Compile Include="Assets\code\util\Finder.cs" />
-    <Compile Include="Assets\code\util\ProbabilityTableExt.cs" />
-    <Compile Include="Assets\code\util\RandomExt.cs" />
+    <ProjectReference Include="UnityProject.CSharp.csproj">
+      <Project>{F5F9D48D-6914-C6F2-CF81-CF8D045EAAD0}</Project>
+      <Name>UnityProject.CSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
