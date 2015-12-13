@@ -1,5 +1,3 @@
-using Assets.code.data;
-using System.Collections.Generic;
 using UnityEngine;
 public class CastVerdictSelectable : MonoBehaviour
 {
@@ -27,11 +25,11 @@ public class CastVerdictSelectable : MonoBehaviour
 
   void absolvePerson()
   {
-    Debug.Log("YOU HAVE PASSED JUDGMENT MORTAL");
+    //Debug.Log("YOU'RE AWESOME! GO TO HEAVEN!");
   }
 
   void damnPerson()
   {
-    Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
+    //Debug.Log("YOU'RE A JERK! LITERALLY GO TO HELL!");
   }
 }

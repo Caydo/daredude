@@ -7,6 +7,7 @@ namespace Assets.code.ui
   public class DisplayJudgedPersonTags : MonoBehaviour
   {
     [SerializeField] GameObject TagPrefab = null;
+    [SerializeField] JudgeStats judgeStats = null;
     List<GameObject> TagObjects = new List<GameObject>();
     public List<string> Tags;
     int cachedTagsCount = -1;
@@ -37,6 +38,15 @@ namespace Assets.code.ui
       newTagObject.transform.localScale = Vector3.one;
       newTagObject.GetComponent<Text>().text = tag;
       TagObjects.Add(newTagObject);
+
+      if(!judgeStats.TagsFromJudged.ContainsKey(tag))
+      {
+        judgeStats.TagsFromJudged.Add(tag, 1);
+      }
+      else
+      {
+        judgeStats.TagsFromJudged[tag]++;
+      }
     }
   }
 }

@@ -17,6 +17,7 @@ public class Judge : MonoBehaviour
   [SerializeField] DisplayJudgedPersonTags displayJudgedTags = null;
   [SerializeField] JudgedPersonDisplayImage[] JudgedPersonBodyParts = null;
   [SerializeField] JudgeReportCard judgeReportCard = null;
+  public JudgedPerson CurrentJudgedPerson = null;
 
   IEnumerator Start()
   {
@@ -53,6 +54,7 @@ public class Judge : MonoBehaviour
   {
     displayJudgedTags.Tags.Clear();
     JudgedPerson person = getRandomPerson();
+    CurrentJudgedPerson = person;
     if (person != null)
     {
       if (m_judgedName != null) m_judgedName.text = person.Name;
