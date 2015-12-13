@@ -13,6 +13,8 @@ public class GameTransitionManager : MonoBehaviour
 
     public List<GameObject> m_trafficCopVehicles = new List<GameObject>();
 
+    public Animation m_cameraAnimation;
+
     void Start()
     {
         StartTrafficCopGame(true);
@@ -43,7 +45,8 @@ public class GameTransitionManager : MonoBehaviour
         //disable st peter
         ToggleStPeterPlease(false);
         //pan down
-        yield return new WaitForSeconds(1f);
+        m_cameraAnimation.Play("CameraPanDown");
+        yield return new WaitForSeconds(2f);
         //enable traffic cop ui
         ToggleTrafficCop(true);
     }
@@ -58,7 +61,8 @@ public class GameTransitionManager : MonoBehaviour
         //disable traffic cop
         ToggleTrafficCop(false);
         //pan up
-        yield return new WaitForSeconds(1f);
+        m_cameraAnimation.Play("CameraPanUp");
+        yield return new WaitForSeconds(2f);
         //enable st peter ui
         ToggleStPeterPlease(true);
     }
