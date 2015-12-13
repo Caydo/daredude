@@ -9,6 +9,8 @@ public class CastVerdictSelectable : MonoBehaviour
   [SerializeField] Verdict verdict = Verdict.Absolution;
   [SerializeField] Judge judge = null;
 
+  public GameTransitionManager gameTransitionManager;
+
   public void CastVerdict()
   {
     if(verdict == Verdict.Absolution)
@@ -19,6 +21,8 @@ public class CastVerdictSelectable : MonoBehaviour
     {
       damnPerson();
     }
+
+    gameTransitionManager.StartTrafficCopGame();
 
     judge.JudgeNewPerson();
   }

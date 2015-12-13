@@ -9,6 +9,8 @@ public class SpawnController : MonoBehaviour {
     public Transform failText;
     public Vehicle carPrefab;
 
+    public GameTransitionManager gameTransitionManager;
+
     public IList<string> spawnedVehicleTypes;
     public IList<string> successVehicleTypes;
     public IList<string> failVehicleTypes;
@@ -36,12 +38,12 @@ public class SpawnController : MonoBehaviour {
         endConditions = new List<EndCondition>();
 
         // testing 
-        var endCondition1 = new SuccessfulVehiclesCondition();
-        endCondition1.successesNeeded = 20;
+        //var endCondition1 = new SuccessfulVehiclesCondition();
+        //endCondition1.successesNeeded = 20;
         var endCondition2 = new TooManyFailsCondition();
-        endCondition2.failuresAllowed = 5;
+        endCondition2.failuresAllowed = 1;
 
-        endConditions.Add(endCondition1);
+        //endConditions.Add(endCondition1);
         endConditions.Add(endCondition2);
         // done testing
     }
@@ -81,7 +83,7 @@ public class SpawnController : MonoBehaviour {
         bool gotFail = endConditions.Select(cond => cond.checkFailure(this)).Aggregate((soFar, next) => soFar || next);
         if(gotFail)
         {
-            failText.gameObject.SetActive(true);
+            gameTransitionManager.StartStPeterPleaseGame();
         }
 
         if(gotSuccess || gotFail)

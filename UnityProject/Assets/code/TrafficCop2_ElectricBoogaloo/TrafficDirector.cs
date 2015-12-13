@@ -18,7 +18,7 @@ public class TrafficDirector : MonoBehaviour {
 
     void Update()
     {
-        if(Input.GetButtonUp("Fire1")) // fire1 will be the 'rotate' button; 
+        if (Input.GetButtonUp("Fire1")) // fire1 will be the 'rotate' button; 
             // TODO I think that we probably want it to keep rotating if held down but not too fast 
         {
             int maxIndex = roads.childCount;
