@@ -19,9 +19,8 @@ namespace Assets.code.ui
     public string GetFullStatsText()
     {
       string statsText = string.Empty;
-      Dictionary<string, int> tagsToCount = new Dictionary<string, int>();
-      Dictionary<string, int> damnedTagToCount = new Dictionary<string, int>();
-      Dictionary<string, int> dictToAddTo = new Dictionary<string, int>();
+      Dictionary<string, int> absolvedTags = new Dictionary<string, int>();
+      Dictionary<string, int> allTags = new Dictionary<string, int>();
 
       foreach (JudgedPerson person in JudgedPeople)
       {
@@ -32,18 +31,30 @@ namespace Assets.code.ui
         else
         {
           absolvedCount++;
+          for (int i = 0; i < person.Tags.Length; i++)
+          {
+            string tag = person.Tags[i];
+            if (!absolvedTags.ContainsKey(tag))
+            {
+              absolvedTags.Add(tag, 1);
+            }
+            else
+            {
+              absolvedTags[tag]++;
+            }
+          }
         }
 
-        for(int i = 0; i < person.Tags.Length; i++)
+        for (int i = 0; i < person.Tags.Length; i++)
         {
           string tag = person.Tags[i];
-          if(!tagsToCount.ContainsKey(tag))
+          if (!allTags.ContainsKey(tag))
           {
-            tagsToCount.Add(tag, 1);
+            allTags.Add(tag, 1);
           }
           else
           {
-            tagsToCount[tag]++;
+            allTags[tag]++;
           }
         }
       }
@@ -51,13 +62,13 @@ namespace Assets.code.ui
       statsText += string.Format("Damned Souls: {0}\n", damnedCount);
       statsText += string.Format("Absolved Souls: {0}\n", absolvedCount);
 
-      foreach (KeyValuePair<string, int> kvp in tagsToCount)
+      foreach (KeyValuePair<string, int> kvp in allTags)
       {
         string tagName = kvp.Key;
         string totalJudgedAvailableWithTag = kvp.Value.ToString();
-        int discoveredTags = (TagsFromJudged.ContainsKey(kvp.Key)) ? TagsFromJudged[kvp.Key] : 0;
+        int absolvedCountForTag = (absolvedTags.ContainsKey(kvp.Key)) ? absolvedTags[kvp.Key] : 0;
 
-        statsText += string.Format("{0}: {1}/{2}\n", kvp.Key, discoveredTags.ToString(), totalJudgedAvailableWithTag);
+        statsText += string.Format("{0}: {1}/{2}\n", kvp.Key, absolvedCountForTag.ToString(), totalJudgedAvailableWithTag);
       }
 
       return statsText;
