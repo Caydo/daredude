@@ -15,7 +15,7 @@ namespace Assets.code.ui
     Dictionary<string, int> absolvedTags = new Dictionary<string, int>();
     Dictionary<string, int> allTags = new Dictionary<string, int>();
 
-    void Start()
+    void Awake()
     {
       JudgedPeople.Clear();
     }
