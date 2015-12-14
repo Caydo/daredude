@@ -38,9 +38,9 @@ public class Judge : MonoBehaviour
       SoulsToBeJudged.Add(kvp.Value.ID);
     }
 
-    int randomNumber = Random.Range(0, SoulsToBeJudged.Count - 1);
     if(SoulsToBeJudged.Count > 0)
     {
+      int randomNumber = Random.Range(0, SoulsToBeJudged.Count - 1);
       person = dataContainer.JudgedPeople[SoulsToBeJudged[randomNumber]];
       dataContainer.JudgedPeople.Remove(person.ID);
       return person;
