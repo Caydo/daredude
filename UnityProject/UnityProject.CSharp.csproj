@@ -103,6 +103,7 @@
     <Compile Include="Assets\code\ui\JudgedPersonDisplayImage.cs" />
     <Compile Include="Assets\code\ui\LoadNextQuestion.cs" />
     <Compile Include="Assets\code\ui\PlayRandomAudioSource.cs" />
+    <Compile Include="Assets\code\ui\SliderAmountLabel.cs" />
     <Compile Include="Assets\code\ui\StingerText.cs" />
     <Compile Include="Assets\code\ui\VictoryConditionPanel.cs" />
     <Compile Include="Assets\code\util\Finder.cs" />
