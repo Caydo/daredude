@@ -42,13 +42,13 @@ public class StingerText : MonoBehaviour {
 
         if(timesCalled == 1)
         {
-          text.text = string.Format("{0}: {1}", TRAFFIC_COP_TITLE_PREFIX, trafficCopNamesList[0]);
+          text.text = string.Format("{0}:\n{1}", TRAFFIC_COP_TITLE_PREFIX, trafficCopNamesList[0]);
           trafficCopNamesList.Remove(trafficCopNamesList[0]);
         }
         else
         {
           int selectedIndex = Random.Range(0, trafficCopNamesList.Count - 1);
-          text.text = string.Format("{0} {1}: {2}", TRAFFIC_COP_TITLE_PREFIX, timesCalled, trafficCopNamesList[selectedIndex]);
+          text.text = string.Format("{0} {1}:\n{2}", TRAFFIC_COP_TITLE_PREFIX, timesCalled, trafficCopNamesList[selectedIndex]);
           trafficCopNamesList.Remove(trafficCopNamesList[selectedIndex]);
         }
     }

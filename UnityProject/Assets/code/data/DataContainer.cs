@@ -1,7 +1,7 @@
 using Assets.code.data;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 [RequireComponent(typeof(JSONUtil))]
 public class DataContainer : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class DataContainer : MonoBehaviour
   [SerializeField] string judgeQuestionsFileName = "StPetersPleaseTextQuestions";
 
   const string DATA_FILE_PREFIX = "data/JSON/";
+  public Dictionary<int, JudgedPerson> AllJudgedPeople = new Dictionary<int, JudgedPerson>();
   public Dictionary<int, JudgedPerson> JudgedPeople = new Dictionary<int, JudgedPerson>();
   public Dictionary<int, JudgeQuestion> JudgeQuestions = new Dictionary<int, JudgeQuestion>();
   public bool DataCollected = false;
@@ -17,6 +18,14 @@ public class DataContainer : MonoBehaviour
   void Start()
   {
     getData();
+    int judgePeopleCount = GameObject.FindWithTag("JudgePeopleCount").GetComponent<JudgePeopleCount>().Count;
+    for (int i = 0; i < judgePeopleCount; i++)
+    {
+      int randomNumberPerson = Random.Range(0, AllJudgedPeople.Count - 1);
+      JudgedPerson person = AllJudgedPeople.Values.ElementAt(randomNumberPerson);
+      JudgedPeople.Add(person.ID, person);
+      AllJudgedPeople.Remove(person.ID);
+    }
   }
 
   void getData()
@@ -47,7 +56,7 @@ public class DataContainer : MonoBehaviour
       case JSONUtil.JSONDataType.JudgedPerson:
         foreach (JudgedPerson judgedPerson in dataPieces)
         {
-          JudgedPeople.Add(judgedPerson.ID, judgedPerson);
+          AllJudgedPeople.Add(judgedPerson.ID, judgedPerson);
         }
         break;
       case JSONUtil.JSONDataType.JudgeQuestion:
