@@ -22,13 +22,14 @@ public class WaitToGoState : GoingState
              var notSelf = t != self.transform;
              var isAhead = directionMagnitude(t.localPosition) < directionMagnitude(self.transform.localPosition);
              var isVehicle = (t.GetComponent<Vehicle>() != null);
+             var isNotEnteringQueue = t.GetComponentInChildren<StateMachine>().CurrentState != "EnterQueueState";
              //Debug.Log(string.Format("checking vehicles ahead {0} {1} {2} {3} {4}", self.transform.name, t.name, notSelf, isAhead, isVehicle));
-             return notSelf && isAhead && isVehicle;
+             return notSelf && isAhead && isVehicle && isNotEnteringQueue;
          })
          .Select(t => t.localPosition)
          .Select(t => directionMagnitude(t))
          .OrderBy(t => t);
-    
+          
         if(vehiclesBehind.Count() >= (threshold - 1) && !AngryIndicator.activeInHierarchy)
         {
           AngryIndicator.SetActive(true);  
