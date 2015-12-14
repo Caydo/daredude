@@ -18,6 +18,8 @@ public class GameTransitionManager : MonoBehaviour
     public List<AudioSource> m_trafficCopLoops;
     public List<AudioSource> m_stPetersPleaseLoops;
 
+    public Animation m_stPeterStinger;
+
     public AudioSource m_heavensIntro;
 
     void Start()
@@ -67,6 +69,7 @@ public class GameTransitionManager : MonoBehaviour
         //disable traffic cop
         ToggleTrafficCop(false);
         m_heavensIntro.Play();
+        m_stPeterStinger.Play();
         //pan up
         m_cameraAnimation.Play("CameraPanUp");
         yield return new WaitForSeconds(2f);
