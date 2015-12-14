@@ -16,7 +16,7 @@ namespace Assets.code.data
     public string[] Tags;
     [JsonName("questions")]
     public int[] Questions;
-    [JsonName("hair")]
+    [JsonName("head")]
     public string Head;
     public bool Damned = false;
   }
