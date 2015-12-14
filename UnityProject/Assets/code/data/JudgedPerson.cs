@@ -16,20 +16,8 @@ namespace Assets.code.data
     public string[] Tags;
     [JsonName("questions")]
     public int[] Questions;
-    [JsonName("image")]
-    public string Image;
-    [JsonName("eyes")]
-    public string Eyes;
-    [JsonName("ears")]
-    public string Ears;
-    [JsonName("nose")]
-    public string Nose;
-    [JsonName("mouth")]
-    public string Mouth;
-    [JsonName("eyebrows")]
-    public string Eyebrows;
     [JsonName("hair")]
-    public string Hair;
+    public string Head;
     public bool Damned = false;
   }
 }

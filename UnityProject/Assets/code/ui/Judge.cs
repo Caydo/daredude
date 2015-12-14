@@ -8,7 +8,6 @@ using Assets.code.ui;
 [RequireComponent(typeof(JudgeStats))]
 public class Judge : MonoBehaviour
 {
-  public Image m_judgedPortrait;
   public Text m_judgedName;
   public Text m_judgedSpeechText;
   public List<DisplayQuestionTextFromID> m_questions;
