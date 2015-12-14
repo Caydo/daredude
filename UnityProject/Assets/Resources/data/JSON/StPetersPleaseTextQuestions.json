@@ -1,632 +1,541 @@
-[
-	{
-		"id": "0",
-		"question": "What was your goal?",
-		"answer": "I just wanted to make my family happy. You know? Do right by 'em.",
-		"next": "30",
-		"tagReveal": "Hard Working"
-	},
-	{
-		"id": "1",
-		"question": "What was your greatest accomplishment?",
-		"answer": "I don't know, really. Never had much to my name. Just a poor boy I suppose.",
-		"next": "31",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "2",
-		"question": "Any regrets?",
-		"answer": "Not really. I'm just going to miss my family.",
-		"next": "32",
-		"tagReveal": ""
-	},
-	{
-		"id": "3",
-		"question": "What was it you did?",
-		"answer": "I slept around. A bunch. My man never did it for me alright. Just a sad sack I got hitched to when I was young.",
-		"next": "36",
-		"tagReveal": "Adulterer"
-	},
-	{
-		"id": "4",
-		"question": "Geez, how's about some respect?",
-		"answer": "Respect?! I ain't never had nothing. You going on about respect?! Who are you to have respect?!",
-		"next": "37",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "5",
-		"question": "Any regrets?",
-		"answer": "I regret nothing. I had fun and that's what you're supposed to do.",
-		"next": "38",
-		"tagReveal": ""
-	},
-	{
-		"id": "6",
-		"question": "Can you hear me?",
-		"answer": "No I can't rear you? What's rear you? Is that something the kids are into?",
-		"next": "42",
-		"tagReveal": ""
-	},
-	{
-		"id": "7",
-		"question": "You're in heaven!",
-		"answer": "Oh, I know that. My time was a coming. Had a good life, I'm ready to move on.",
-		"next": "43",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "8",
-		"question": "Grape Juice?",
-		"answer": "Sure I love the stuff; but not at the moment thanks.",
-		"next": "44",
-		"tagReveal": "Kind"
-	},
-	{
-		"id": "9",
-		"question": "You know this isn't an interview right?",
-		"answer": "Of course. Just trying to tell you about me, you know? Lead with the strong stuff?",
-		"next": "48",
-		"tagReveal": "Hard Working"
-	},
-	{
-		"id": "10",
-		"question": "Tell me about your life.",
-		"answer": "Well I worked hard. Ran many successful businesses. Never found time for the family thing.",
-		"next": "49",
-		"tagReveal": "Hard Working"
-	},
-	{
-		"id": "11",
-		"question": "What was your greatest accomplishment?",
-		"answer": "Making it onto Fortune 500 wasn't bad.",
-		"next": "50",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "12",
-		"question": "Little rude aren't you?",
-		"answer": "So what if I am. I say what I mean and mean what I say. Now are you gonna let me in or not?",
-		"next": "54",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "13",
-		"question": "What was your greatest accomplishment?",
-		"answer": "Getting that sad sack of a husband of mine to do anything. Works 80 hours and we still poor.",
-		"next": "55",
-		"tagReveal": "Greedy"
-	},
-	{
-		"id": "14",
-		"question": "Any regrets?",
-		"answer": "I don't got time for that kinda thinking.",
-		"next": "56",
-		"tagReveal": ""
-	},
-	{
-		"id": "15",
-		"question": "Well sometimes you need to do more that not hurt people.",
-		"answer": "I know that. And I did from time to time. I just was enjoying life.",
-		"next": "60",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "16",
-		"question": "Do you think life is just about fun?",
-		"answer": "No. I get it, man. I just wanted to experience it all.",
-		"next": "61",
-		"tagReveal": ""
-	},
-	{
-		"id": "17",
-		"question": "Any regrets?",
-		"answer": "It was great. It really was.",
-		"next": "62",
-		"tagReveal": ""
-	},
-	{
-		"id": "18",
-		"question": "Kept the peace?",
-		"answer": "I used to be KGB. Then I become a normal police man in Russian Federation.",
-		"next": "66",
-		"tagReveal": ""
-	},
-	{
-		"id": "19",
-		"question": "What was your goal?",
-		"answer": "I just want to help people. To give what I can where I can.",
-		"next": "67",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "20",
-		"question": "Any regrets?",
-		"answer": "Bah! I do not dwell on such things.",
-		"next": "68",
-		"tagReveal": ""
-	},
-	{
-		"id": "21",
-		"question": "More flies with sugar that vinegar much?",
-		"answer": "Alright, I may be a little rough around the edges; but hell, who has time for that cutesy stuff?",
-		"next": "72",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "22",
-		"question": "The other place?",
-		"answer": "The hot one. You know gnashing of teeth and so forth?",
-		"next": "73",
-		"tagReveal": ""
-	},
-	{
-		"id": "23",
-		"question": "What makes you so special?",
-		"answer": "Special? Why I gots to be special? Can't a gal just be a normal gal?",
-		"next": "74",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "24",
-		"question": "Well you're here now. Do you know where here is?",
-		"answer": "Ay! The Pearly Gates, you must be Santo Pedro!",
-		"next": "78",
-		"tagReveal": ""
-	},
-	{
-		"id": "25",
-		"question": "How terrible! Couldn't have been the traffic cop's fault though..",
-		"answer": "Are you kidding?! He was terrible! I suppose he was trying his hardest though.",
-		"next": "79",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "26",
-		"question": "Were you paying attention?",
-		"answer": "My perrito knocked my smartphone right out of my hand.",
-		"next": "80",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "27",
-		"question": "Guess your luck ran out?",
-		"answer": "That's the secret about the luck o' the Irish. We're actually a pretty unlucky folk.",
-		"next": "84",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "28",
-		"question": "So you're Catholic?",
-		"answer": "That I am, and proud. Taught me to love thy neighbor, even the nastiest.",
-		"next": "85",
-		"tagReveal": "Kind"
-	},
-	{
-		"id": "29",
-		"question": "What did you do for a living?",
-		"answer": "Oh, I was a fisherman back in the old country, before I left for America.",
-		"next": "86",
-		"tagReveal": ""
-	},
-	{
-		"id": "30",
-		"question": "Do you really care about your family?",
-		"answer": "Of course I do! How dare you? I'm sorry, I didn't mean to shout.",
-		"next": "33",
-		"tagReveal": ""
-	},
-	{
-		"id": "31",
-		"question": "Were you a workaholic?",
-		"answer": "Well, I wouldn't call it that. I wanted to provide for family. Mighta put in a few too many hours; but it was all for them.",
-		"next": "34",
-		"tagReveal": "Hard Working"
-	},
-	{
-		"id": "32",
-		"question": "What's your fondest memory?",
-		"answer": "Watching my little boy take his first steps. That was a fine moment.",
-		"next": "35",
-		"tagReveal": ""
-	},
-	{
-		"id": "33",
-		"question": "Are you lying to me?",
-		"answer": "Alright! You caught me. I slipped up. My wife is always nagging me. Always on me. It was one time!",
-		"next": "-1",
-		"tagReveal": "Adulterer"
-	},
-	{
-		"id": "34",
-		"question": "What was your wife like?",
-		"answer": "She was beautiful and lovely when we met. Over the years things cooled down. I never stopped loving her; just made mistakes you know?",
-		"next": "-1",
-		"tagReveal": "Adulterer"
-	},
-	{
-		"id": "35",
-		"question": "Why should I let you in?",
-		"answer": "Not really sure I've earned it.",
-		"next": "-1",
-		"tagReveal": "Hard Working"
-	},
-	{
-		"id": "36",
-		"question": "Tell me about your life.",
-		"answer": "It sucked growing up; but I moved on. Ditched those suckers and made my own way.",
-		"next": "39",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "37",
-		"question": "Are you lying to me?",
-		"answer": "Hell no! Ain't worth, never.",
-		"next": "40",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "38",
-		"question": "What is your favorite memory?",
-		"answer": "I ain't got those kinds of things.",
-		"next": "41",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "39",
-		"question": "What will you miss?",
-		"answer": "God knows it ain't my husband.",
-		"next": "-1",
-		"tagReveal": "Adulterer"
-	},
-	{
-		"id": "40",
-		"question": "Why should I let you in?",
-		"answer": "I had it rough. I deserve a break.",
-		"next": "-1",
-		"tagReveal": ""
-	},
-	{
-		"id": "41",
-		"question": "Why so much hatred?",
-		"answer": "You try it down there!",
-		"next": "-1",
-		"tagReveal": ""
-	},
-	{
-		"id": "42",
-		"question": "I need to ask you some questions. Can you hear me?",
-		"answer": "Alright, alright. I was yanking yer chain. I can hear you fine. What did you have in mind?",
-		"next": "45",
-		"tagReveal": "Kind"
-	},
-	{
-		"id": "43",
-		"question": "Any regrets?",
-		"answer": "Not a one. Maybe die sooner? I got too damn old. No help to nobody.",
-		"next": "46",
-		"tagReveal": "Kind"
-	},
-	{
-		"id": "44",
-		"question": "What was your worst mistake?",
-		"answer": "I was unfaithful, my dear Trudy, I'm so sorry.",
-		"next": "47",
-		"tagReveal": "Adulterer"
-	},
-	{
-		"id": "45",
-		"question": "What's your fondest memory?",
-		"answer": "Paris, Rome, Athens, Beijing. I saw 'em all.",
-		"next": "-1",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "46",
-		"question": "What was your greatest accomplishment?",
-		"answer": "I built an empire, with these two hands! Raised from nothing!",
-		"next": "-1",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "47",
-		"question": "Sure you don't want some grape juice?",
-		"answer": "What is it with you church folk and grape juice anyhow?",
-		"next": "-1",
-		"tagReveal": ""
-	},
-	{
-		"id": "48",
-		"question": "What's your fondest memory?",
-		"answer": "Not too sure about that one. Guess I never made time for memories.",
-		"next": "51",
-		"tagReveal": "Hard Working"
-	},
-	{
-		"id": "49",
-		"question": "Are you lying to me?",
-		"answer": "No. I wouldn't. You'd catch me anyhow.",
-		"next": "52",
-		"tagReveal": ""
-	},
-	{
-		"id": "50",
-		"question": "Why should I let you in?",
-		"answer": "Whatever the price I can pay it. Just kidding. I know that's not how it works. Not sure if I'm worth it; but I never killed anyone.",
-		"next": "53",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "51",
-		"question": "What did you do with all your money?",
-		"answer": "I had a good life, alright? What so wrong about taking care of number one?",
-		"next": "-1",
-		"tagReveal": "Greedy"
-	},
-	{
-		"id": "52",
-		"question": "What about your mother?",
-		"answer": "She never gave me shit! Alright!? So what if I didn't let her mooch off me.",
-		"next": "-1",
-		"tagReveal": "Greedy"
-	},
-	{
-		"id": "53",
-		"question": "Any regrets?",
-		"answer": "None. You make the choices you do. Then you live with 'em.",
-		"next": "-1",
-		"tagReveal": ""
-	},
-	{
-		"id": "54",
-		"question": "Were you married?",
-		"answer": "Yes. To some piece of shit lazy sonuvabitch. Worked all day every day and never made nothing of himself.",
-		"next": "57",
-		"tagReveal": "Greedy"
-	},
-	{
-		"id": "55",
-		"question": "What's your fondest memory?",
-		"answer": "Never got to make memories. Didn't have that kinda money.",
-		"next": "58",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "56",
-		"question": "Why should I let you in?",
-		"answer": "Look, I'm no goody good; but I did okay.",
-		"next": "59",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "57",
-		"question": "You don't seem too pleasant.",
-		"answer": "Well maybe I ain't. I had to claw a life together from scraps? Nice up here on your high horse?",
-		"next": "-1",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "58",
-		"question": "What was your goal?",
-		"answer": "Goal? I can't afford no goals.",
-		"next": "-1",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "59",
-		"question": "Anything else I should know?",
-		"answer": "Yeah, if you see my husband send that bastard to hell.",
-		"next": "-1",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "60",
-		"question": "Do you think you did enough to help your fellow person?",
-		"answer": "Look, I don't like to brag. Alright. I gave quite a bit to charity. So what. I'm not Gandhi.",
-		"next": "63",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "61",
-		"question": "Why should I let you in?",
-		"answer": "Not really too sure. I guess I'm an alright guy.",
-		"next": "64",
-		"tagReveal": ""
-	},
-	{
-		"id": "62",
-		"question": "What's your fondest memory?",
-		"answer": "Sitting on the beach all day in Nice. That was a good day.",
-		"next": "65",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "63",
-		"question": "What was your job?",
-		"answer": "I worked at my dad's company. Big place. Lots of vacation time.",
-		"next": "-1",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "64",
-		"question": "What was your goal?",
-		"answer": "Enjoy the sweeter things. Breathe deep.",
-		"next": "-1",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "65",
-		"question": "What was your greatest accomplishment?",
-		"answer": "I once got a letter from a kid. Apparently I paid for his school or something. First time I thought I'd done good.",
-		"next": "-1",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "66",
-		"question": "Are you lying to me?",
-		"answer": "Lying, no! I do not lie. I am a simple man; that is all.",
-		"next": "69",
-		"tagReveal": ""
-	},
-	{
-		"id": "67",
-		"question": "Why should I let you in?",
-		"answer": "I was a lawman. I helped people. This is a noble thing.",
-		"next": "70",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "68",
-		"question": "What was your greatest accomplishment?",
-		"answer": "Who cares of such things? Accomplishments? It is for the ambitious and the nefarious.",
-		"next": "71",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "69",
-		"question": "Did you do you job well?",
-		"answer": "I got the job done. Nothing extra. But I did my job.",
-		"next": "-1",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "70",
-		"question": "What is your favorite memory?",
-		"answer": "Sitting by my mama with some fresh borscht and a roaring fire. The simple things.",
-		"next": "-1",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "71",
-		"question": "What was your worst mistake?",
-		"answer": "Once a man died in my arms. I was getting a coffee when the call came in. I didn't go right away.",
-		"next": "-1",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "72",
-		"question": "What did you do for a living?",
-		"answer": "Job? What job? Daddy was rich. Paid my way the way through.",
-		"next": "75",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "73",
-		"question": "What is your favorite memory?",
-		"answer": "Amsterdam by night and Rome by day. That was a helluva trip.",
-		"next": "76",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "74",
-		"question": "Any regrets?",
-		"answer": "Zilch. Next question.",
-		"next": "77",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "75",
-		"question": "Why should I let you in?",
-		"answer": "Cause I did what a gal's gotta do to survive. I lived my life; never went outta my way for trouble.",
-		"next": "-1",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "76",
-		"question": "Are you lying to me?",
-		"answer": "You really think the way I am I go in for lying?",
-		"next": "-1",
-		"tagReveal": "Honest"
-	},
-	{
-		"id": "77",
-		"question": "Anything else I should know?",
-		"answer": "I didn't do shit of consequence; but hell it was a ride.",
-		"next": "-1",
-		"tagReveal": "Lazy"
-	},
-	{
-		"id": "78",
-		"question": "What was your greatest accomplishment?",
-		"answer": "I was a successful businesswoman and Latina.",
-		"next": "77",
-		"tagReveal": "Wealthy"
-	},
-	{
-		"id": "79",
-		"question": "What's your fondest memory?",
-		"answer": "Mi mami used to take us to the homeless shelters every weekend. We didn't have much then; but she said we must share it.",
-		"next": "78",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "80",
-		"question": "Any regrets?",
-		"answer": "Nada.",
-		"next": "79",
-		"tagReveal": ""
-	},
-	{
-		"id": "81",
-		"question": "You wouldn't lie to me?",
-		"answer": "Lo siento. Once, as a small girl, I caused a man's death. It was all my fault. Mi mami, she hid it from the police.",
-		"next": "-1",
-		"tagReveal": "Murderer"
-	},
-	{
-		"id": "82",
-		"question": "Why should I let you in?",
-		"answer": "I've been a good person. I helped people with my money. I wasn't greedy.",
-		"next": "-1",
-		"tagReveal": "Generous"
-	},
-	{
-		"id": "83",
-		"question": "Anything else I should know?",
-		"answer": "I did hide something. When I was little I accidentally caused a man to die. It was fault. I should have been home. I am so sorry.",
-		"next": "-1",
-		"tagReveal": "Murderer"
-	},
-	{
-		"id": "84",
-		"question": "Why should I let you in?",
-		"answer": "Well you know what the good Book says. I've confessed me sins, I followed all the sacraments.",
-		"next": "84",
-		"tagReveal": ""
-	},
-	{
-		"id": "85",
-		"question": "What's your fondest memory?",
-		"answer": "Me brother and I fishing out in the lake by me grandpappy's house. I sure do miss him.",
-		"next": "85",
-		"tagReveal": "Kind"
-	},
-	{
-		"id": "86",
-		"question": "Why did you leave your home?",
-		"answer": "I had to leave the old country after me brother passed. He was a nasty one that boy.",
-		"next": "86",
-		"tagReveal": "Murderer"
-	},
-	{
-		"id": "87",
-		"question": "How did you get to America?",
-		"answer": "I smuggled aboard a freight ship. Not the grandest of settings; but one I could afford.",
-		"next": "-1",
-		"tagReveal": "Poor"
-	},
-	{
-		"id": "88",
-		"question": "What happened to your brother?",
-		"answer": "One night he got into the drink. Started hitting his old lady. I only meant to stop him..",
-		"next": "-1",
-		"tagReveal": "Murderer"
-	},
-	{
-		"id": "89",
-		"question": "Anything else I should know?",
-		"answer": "I didn't leave the old country in the best way. My brother got into the drink one night. He had quite the temper, I only meant to stop him..",
-		"next": "-1",
-		"tagReveal": "Murderer"
-	}
-]
+[{
+	"id": "0",
+	"question": "What was your goal?",
+	"answer": "I just wanted to make my family happy. You know? Do right by 'em.",
+	"next": "30",
+	"tagReveal": "Hard Working"
+}, {
+	"id": "1",
+	"question": "What was your greatest accomplishment?",
+	"answer": "I don't know, really. Never had much to my name. Just a poor boy I suppose.",
+	"next": "31",
+	"tagReveal": "Poor"
+}, {
+	"id": "2",
+	"question": "Any regrets?",
+	"answer": "Not really. I'm just going to miss my family.",
+	"next": "32",
+	"tagReveal": ""
+}, {
+	"id": "3",
+	"question": "What was it you did?",
+	"answer": "I slept around. A bunch. My man never did it for me alright. Just a sad sack I got hitched to when I was young.",
+	"next": "36",
+	"tagReveal": "Adulterer"
+}, {
+	"id": "4",
+	"question": "Geez, how's about some respect?",
+	"answer": "Respect?! I ain't never had nothing. You going on about respect?! Who are you to have respect?!",
+	"next": "37",
+	"tagReveal": "Poor"
+}, {
+	"id": "5",
+	"question": "Any regrets?",
+	"answer": "I regret nothing. I had fun and that's what you're supposed to do.",
+	"next": "38",
+	"tagReveal": ""
+}, {
+	"id": "6",
+	"question": "Can you hear me?",
+	"answer": "No I can't rear you? What's rear you? Is that something the kids are into?",
+	"next": "42",
+	"tagReveal": ""
+}, {
+	"id": "7",
+	"question": "You're in heaven!",
+	"answer": "Oh, I know that. My time was a coming. Had a good life, I'm ready to move on.",
+	"next": "43",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "8",
+	"question": "Grape Juice?",
+	"answer": "Sure I love the stuff; but not at the moment thanks.",
+	"next": "44",
+	"tagReveal": "Kind"
+}, {
+	"id": "9",
+	"question": "You know this isn't an interview right?",
+	"answer": "Of course. Just trying to tell you about me, you know? Lead with the strong stuff?",
+	"next": "48",
+	"tagReveal": "Hard Working"
+}, {
+	"id": "10",
+	"question": "Tell me about your life.",
+	"answer": "Well I worked hard. Ran many successful businesses. Never found time for the family thing.",
+	"next": "49",
+	"tagReveal": "Hard Working"
+}, {
+	"id": "11",
+	"question": "What was your greatest accomplishment?",
+	"answer": "Making it onto Fortune 500 wasn't bad.",
+	"next": "50",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "12",
+	"question": "Little rude aren't you?",
+	"answer": "So what if I am. I say what I mean and mean what I say. Now are you gonna let me in or not?",
+	"next": "54",
+	"tagReveal": "Honest"
+}, {
+	"id": "13",
+	"question": "What was your greatest accomplishment?",
+	"answer": "Getting that sad sack of a husband of mine to do anything. Works 80 hours and we still poor.",
+	"next": "55",
+	"tagReveal": "Greedy"
+}, {
+	"id": "14",
+	"question": "Any regrets?",
+	"answer": "I don't got time for that kinda thinking.",
+	"next": "56",
+	"tagReveal": ""
+}, {
+	"id": "15",
+	"question": "Well sometimes you need to do more that not hurt people.",
+	"answer": "I know that. And I did from time to time. I just was enjoying life.",
+	"next": "60",
+	"tagReveal": "Lazy"
+}, {
+	"id": "16",
+	"question": "Do you think life is just about fun?",
+	"answer": "No. I get it, man. I just wanted to experience it all.",
+	"next": "61",
+	"tagReveal": ""
+}, {
+	"id": "17",
+	"question": "Any regrets?",
+	"answer": "It was great. It really was.",
+	"next": "62",
+	"tagReveal": ""
+}, {
+	"id": "18",
+	"question": "Kept the peace?",
+	"answer": "I used to be KGB. Then I become a normal police man in Russian Federation.",
+	"next": "66",
+	"tagReveal": ""
+}, {
+	"id": "19",
+	"question": "What was your goal?",
+	"answer": "I just want to help people. To give what I can where I can.",
+	"next": "67",
+	"tagReveal": "Generous"
+}, {
+	"id": "20",
+	"question": "Any regrets?",
+	"answer": "Bah! I do not dwell on such things.",
+	"next": "68",
+	"tagReveal": ""
+}, {
+	"id": "21",
+	"question": "More flies with sugar that vinegar much?",
+	"answer": "Alright, I may be a little rough around the edges; but hell, who has time for that cutesy stuff?",
+	"next": "72",
+	"tagReveal": "Honest"
+}, {
+	"id": "22",
+	"question": "The other place?",
+	"answer": "The hot one. You know gnashing of teeth and so forth?",
+	"next": "73",
+	"tagReveal": ""
+}, {
+	"id": "23",
+	"question": "What makes you so special?",
+	"answer": "Special? Why I gots to be special? Can't a gal just be a normal gal?",
+	"next": "74",
+	"tagReveal": "Honest"
+}, {
+	"id": "24",
+	"question": "Well you're here now. Do you know where here is?",
+	"answer": "Ay! The Pearly Gates, you must be Santo Pedro!",
+	"next": "78",
+	"tagReveal": ""
+}, {
+	"id": "25",
+	"question": "How terrible! Couldn't have been the traffic cop's fault though..",
+	"answer": "Are you kidding?! He was terrible! I suppose he was trying his hardest though.",
+	"next": "79",
+	"tagReveal": "Generous"
+}, {
+	"id": "26",
+	"question": "Were you paying attention?",
+	"answer": "My perrito knocked my smartphone right out of my hand.",
+	"next": "80",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "27",
+	"question": "Guess your luck ran out?",
+	"answer": "That's the secret about the luck o' the Irish. We're actually a pretty unlucky folk.",
+	"next": "84",
+	"tagReveal": "Poor"
+}, {
+	"id": "28",
+	"question": "So you're Catholic?",
+	"answer": "That I am, and proud. Taught me to love thy neighbor, even the nastiest.",
+	"next": "85",
+	"tagReveal": "Kind"
+}, {
+	"id": "29",
+	"question": "What did you do for a living?",
+	"answer": "Oh, I was a fisherman back in the old country, before I left for America.",
+	"next": "86",
+	"tagReveal": ""
+}, {
+	"id": "30",
+	"question": "Do you really care about your family?",
+	"answer": "Of course I do! How dare you? I'm sorry, I didn't mean to shout.",
+	"next": "33",
+	"tagReveal": ""
+}, {
+	"id": "31",
+	"question": "Were you a workaholic?",
+	"answer": "Well, I wouldn't call it that. I wanted to provide for family. Mighta put in a few too many hours; but it was all for them.",
+	"next": "34",
+	"tagReveal": "Hard Working"
+}, {
+	"id": "32",
+	"question": "What's your fondest memory?",
+	"answer": "Watching my little boy take his first steps. That was a fine moment.",
+	"next": "35",
+	"tagReveal": ""
+}, {
+	"id": "33",
+	"question": "Are you lying to me?",
+	"answer": "Alright! You caught me. I slipped up. My wife is always nagging me. Always on me. It was one time!",
+	"next": "-1",
+	"tagReveal": "Adulterer"
+}, {
+	"id": "34",
+	"question": "What was your wife like?",
+	"answer": "She was beautiful and lovely when we met. Over the years things cooled down. I never stopped loving her; just made mistakes you know?",
+	"next": "-1",
+	"tagReveal": "Adulterer"
+}, {
+	"id": "35",
+	"question": "Why should I let you in?",
+	"answer": "Not really sure I've earned it.",
+	"next": "-1",
+	"tagReveal": "Hard Working"
+}, {
+	"id": "36",
+	"question": "Tell me about your life.",
+	"answer": "It sucked growing up; but I moved on. Ditched those suckers and made my own way.",
+	"next": "39",
+	"tagReveal": "Honest"
+}, {
+	"id": "37",
+	"question": "Are you lying to me?",
+	"answer": "Hell no! Ain't worth, never.",
+	"next": "40",
+	"tagReveal": "Honest"
+}, {
+	"id": "38",
+	"question": "What is your favorite memory?",
+	"answer": "I ain't got those kinds of things.",
+	"next": "41",
+	"tagReveal": "Poor"
+}, {
+	"id": "39",
+	"question": "What will you miss?",
+	"answer": "God knows it ain't my husband.",
+	"next": "-1",
+	"tagReveal": "Adulterer"
+}, {
+	"id": "40",
+	"question": "Why should I let you in?",
+	"answer": "I had it rough. I deserve a break.",
+	"next": "-1",
+	"tagReveal": ""
+}, {
+	"id": "41",
+	"question": "Why so much hatred?",
+	"answer": "You try it down there!",
+	"next": "-1",
+	"tagReveal": ""
+}, {
+	"id": "42",
+	"question": "I need to ask you some questions. Can you hear me?",
+	"answer": "Alright, alright. I was yanking yer chain. I can hear you fine. What did you have in mind?",
+	"next": "45",
+	"tagReveal": "Kind"
+}, {
+	"id": "43",
+	"question": "Any regrets?",
+	"answer": "Not a one. Maybe die sooner? I got too damn old. No help to nobody.",
+	"next": "46",
+	"tagReveal": "Kind"
+}, {
+	"id": "44",
+	"question": "What was your worst mistake?",
+	"answer": "I was unfaithful, my dear Trudy, I'm so sorry.",
+	"next": "47",
+	"tagReveal": "Adulterer"
+}, {
+	"id": "45",
+	"question": "What's your fondest memory?",
+	"answer": "Paris, Rome, Athens, Beijing. I saw 'em all.",
+	"next": "-1",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "46",
+	"question": "What was your greatest accomplishment?",
+	"answer": "I built an empire, with these two hands! Raised from nothing!",
+	"next": "-1",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "47",
+	"question": "Sure you don't want some grape juice?",
+	"answer": "What is it with you church folk and grape juice anyhow?",
+	"next": "-1",
+	"tagReveal": ""
+}, {
+	"id": "48",
+	"question": "What's your fondest memory?",
+	"answer": "Not too sure about that one. Guess I never made time for memories.",
+	"next": "51",
+	"tagReveal": "Hard Working"
+}, {
+	"id": "49",
+	"question": "Are you lying to me?",
+	"answer": "No. I wouldn't. You'd catch me anyhow.",
+	"next": "52",
+	"tagReveal": ""
+}, {
+	"id": "50",
+	"question": "Why should I let you in?",
+	"answer": "Whatever the price I can pay it. Just kidding. I know that's not how it works. Not sure if I'm worth it; but I never killed anyone.",
+	"next": "53",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "51",
+	"question": "What did you do with all your money?",
+	"answer": "I had a good life, alright? What so wrong about taking care of number one?",
+	"next": "-1",
+	"tagReveal": "Greedy"
+}, {
+	"id": "52",
+	"question": "What about your mother?",
+	"answer": "She never gave me shit! Alright!? So what if I didn't let her mooch off me.",
+	"next": "-1",
+	"tagReveal": "Greedy"
+}, {
+	"id": "53",
+	"question": "Any regrets?",
+	"answer": "None. You make the choices you do. Then you live with 'em.",
+	"next": "-1",
+	"tagReveal": ""
+}, {
+	"id": "54",
+	"question": "Were you married?",
+	"answer": "Yes. To some piece of shit lazy sonuvabitch. Worked all day every day and never made nothing of himself.",
+	"next": "57",
+	"tagReveal": "Greedy"
+}, {
+	"id": "55",
+	"question": "What's your fondest memory?",
+	"answer": "Never got to make memories. Didn't have that kinda money.",
+	"next": "58",
+	"tagReveal": "Poor"
+}, {
+	"id": "56",
+	"question": "Why should I let you in?",
+	"answer": "Look, I'm no goody good; but I did okay.",
+	"next": "59",
+	"tagReveal": "Honest"
+}, {
+	"id": "57",
+	"question": "You don't seem too pleasant.",
+	"answer": "Well maybe I ain't. I had to claw a life together from scraps? Nice up here on your high horse?",
+	"next": "-1",
+	"tagReveal": "Poor"
+}, {
+	"id": "58",
+	"question": "What was your goal?",
+	"answer": "Goal? I can't afford no goals.",
+	"next": "-1",
+	"tagReveal": "Poor"
+}, {
+	"id": "59",
+	"question": "Anything else I should know?",
+	"answer": "Yeah, if you see my husband send that bastard to hell.",
+	"next": "-1",
+	"tagReveal": "Honest"
+}, {
+	"id": "60",
+	"question": "Do you think you did enough to help your fellow person?",
+	"answer": "Look, I don't like to brag. Alright. I gave quite a bit to charity. So what. I'm not Gandhi.",
+	"next": "63",
+	"tagReveal": "Generous"
+}, {
+	"id": "61",
+	"question": "Why should I let you in?",
+	"answer": "Not really too sure. I guess I'm an alright guy.",
+	"next": "64",
+	"tagReveal": ""
+}, {
+	"id": "62",
+	"question": "What's your fondest memory?",
+	"answer": "Sitting on the beach all day in Nice. That was a good day.",
+	"next": "65",
+	"tagReveal": "Lazy"
+}, {
+	"id": "63",
+	"question": "What was your job?",
+	"answer": "I worked at my dad's company. Big place. Lots of vacation time.",
+	"next": "-1",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "64",
+	"question": "What was your goal?",
+	"answer": "Enjoy the sweeter things. Breathe deep.",
+	"next": "-1",
+	"tagReveal": "Lazy"
+}, {
+	"id": "65",
+	"question": "What was your greatest accomplishment?",
+	"answer": "I once got a letter from a kid. Apparently I paid for his school or something. First time I thought I'd done good.",
+	"next": "-1",
+	"tagReveal": "Generous"
+}, {
+	"id": "66",
+	"question": "Are you lying to me?",
+	"answer": "Lying, no! I do not lie. I am a simple man; that is all.",
+	"next": "69",
+	"tagReveal": ""
+}, {
+	"id": "67",
+	"question": "Why should I let you in?",
+	"answer": "I was a lawman. I helped people. This is a noble thing.",
+	"next": "70",
+	"tagReveal": "Generous"
+}, {
+	"id": "68",
+	"question": "What was your greatest accomplishment?",
+	"answer": "Who cares of such things? Accomplishments? It is for the ambitious and the nefarious.",
+	"next": "71",
+	"tagReveal": "Lazy"
+}, {
+	"id": "69",
+	"question": "Did you do you job well?",
+	"answer": "I got the job done. Nothing extra. But I did my job.",
+	"next": "-1",
+	"tagReveal": "Lazy"
+}, {
+	"id": "70",
+	"question": "What is your favorite memory?",
+	"answer": "Sitting by my mama with some fresh borscht and a roaring fire. The simple things.",
+	"next": "-1",
+	"tagReveal": "Poor"
+}, {
+	"id": "71",
+	"question": "What was your worst mistake?",
+	"answer": "Once a man died in my arms. I was getting a coffee when the call came in. I didn't go right away.",
+	"next": "-1",
+	"tagReveal": "Lazy"
+}, {
+	"id": "72",
+	"question": "What did you do for a living?",
+	"answer": "Job? What job? Daddy was rich. Paid my way the way through.",
+	"next": "75",
+	"tagReveal": "Lazy"
+}, {
+	"id": "73",
+	"question": "What is your favorite memory?",
+	"answer": "Amsterdam by night and Rome by day. That was a helluva trip.",
+	"next": "76",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "74",
+	"question": "Any regrets?",
+	"answer": "Zilch. Next question.",
+	"next": "77",
+	"tagReveal": "Honest"
+}, {
+	"id": "75",
+	"question": "Why should I let you in?",
+	"answer": "Cause I did what a gal's gotta do to survive. I lived my life; never went outta my way for trouble.",
+	"next": "-1",
+	"tagReveal": "Honest"
+}, {
+	"id": "76",
+	"question": "Are you lying to me?",
+	"answer": "You really think the way I am I go in for lying?",
+	"next": "-1",
+	"tagReveal": "Honest"
+}, {
+	"id": "77",
+	"question": "Anything else I should know?",
+	"answer": "I didn't do shit of consequence; but hell it was a ride.",
+	"next": "-1",
+	"tagReveal": "Lazy"
+}, {
+	"id": "78",
+	"question": "What was your greatest accomplishment?",
+	"answer": "I was a successful businesswoman and Latina.",
+	"next": "81",
+	"tagReveal": "Wealthy"
+}, {
+	"id": "79",
+	"question": "What's your fondest memory?",
+	"answer": "Mi mami used to take us to the homeless shelters every weekend. We didn't have much then; but she said we must share it.",
+	"next": "82",
+	"tagReveal": "Generous"
+}, {
+	"id": "80",
+	"question": "Any regrets?",
+	"answer": "Nada.",
+	"next": "83",
+	"tagReveal": ""
+}, {
+	"id": "81",
+	"question": "You wouldn't lie to me?",
+	"answer": "Lo siento. Once, as a small girl, I caused a man's death. It was all my fault. Mi mami, she hid it from the police.",
+	"next": "-1",
+	"tagReveal": "Murderer"
+}, {
+	"id": "82",
+	"question": "Why should I let you in?",
+	"answer": "I've been a good person. I helped people with my money. I wasn't greedy.",
+	"next": "-1",
+	"tagReveal": "Generous"
+}, {
+	"id": "83",
+	"question": "Anything else I should know?",
+	"answer": "I did hide something. When I was little I accidentally caused a man to die. It was fault. I should have been home. I am so sorry.",
+	"next": "-1",
+	"tagReveal": "Murderer"
+}, {
+	"id": "84",
+	"question": "Why should I let you in?",
+	"answer": "Well you know what the good Book says. I've confessed me sins, I followed all the sacraments.",
+	"next": "87",
+	"tagReveal": ""
+}, {
+	"id": "85",
+	"question": "What's your fondest memory?",
+	"answer": "Me brother and I fishing out in the lake by me grandpappy's house. I sure do miss him.",
+	"next": "88",
+	"tagReveal": "Kind"
+}, {
+	"id": "86",
+	"question": "Why did you leave your home?",
+	"answer": "I had to leave the old country after me brother passed. He was a nasty one that boy.",
+	"next": "89",
+	"tagReveal": "Murderer"
+}, {
+	"id": "87",
+	"question": "How did you get to America?",
+	"answer": "I smuggled aboard a freight ship. Not the grandest of settings; but one I could afford.",
+	"next": "-1",
+	"tagReveal": "Poor"
+}, {
+	"id": "88",
+	"question": "What happened to your brother?",
+	"answer": "One night he got into the drink. Started hitting his old lady. I only meant to stop him..",
+	"next": "-1",
+	"tagReveal": "Murderer"
+}, {
+	"id": "89",
+	"question": "Anything else I should know?",
+	"answer": "I didn't leave the old country in the best way. My brother got into the drink one night. He had quite the temper, I only meant to stop him..",
+	"next": "-1",
+	"tagReveal": "Murderer"
+}]
