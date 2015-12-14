@@ -1,72 +1,82 @@
 [
 	{
 		"id": "0",
-		"name": "John Smith",
-		"bio": "John lived a boring, middle class life. Worked a dead end job for years before he would up on dead end.",
-		"startText": "Hello, guess I finally bit the big one. I'm a good guy, worked hard for my family. I'm going to miss them.",
-		"tags": ["Hard Working" ,"Poor","Generous"],
-		"questions": [0,1,2],
-		"eyes": "test",
-		"ears": "test",
-		"nose": "test",
-		"mouth": "test",
-		"eyebrows": "test",
-		"hair": "guy1"
+		"name": "John Goodson",
+		"startText": "Well, guess I finally bit the big one. Hope my family will get by without me.",
+		"tags": "[Adulterer,Hard Working,Poor]",
+		"questions": "[0,1,2]",
+		"head": "Guy1"
 	},
 	{
 		"id": "1",
-		"name": "Alice Dewinter",
-		"bio": "Alice was a free spirit, lived the life she wanted to live, funded by Daddy of course",
-		"startText": "Can we just get this over with? Let me in.",
-		"tags": ["Wealthy", "Lazy","Glutton"],
-		"questions": [3,4,5],
-		"eyes": "test",
-		"ears": "test",
-		"nose": "test",
-		"mouth": "test",
-		"eyebrows": "test",
-		"hair": "girl1"
+		"name": "Delores Logan",
+		"startText": "I've had it pretty rough okay? How's about you gimme a pass on what I did?",
+		"tags": "[Adulterer,Honest,Poor]",
+		"questions": "[3,4,5]",
+		"head": "girl2"
 	},
 	{
 		"id": "2",
-		"name": "James O'Dougal",
-		"bio": "James was from the old country, and never let anyone forget it. Come to think if he loved it so much, why'd he leave?",
-		"startText": "Heya, Sainty, done me best to be a good boy. Went to mass, said me prayers, tried me hardest.",
-		"tags": ["Hard Working", "Kind", "Murderer"],
-		"questions": [6,7,8],
-		"eyes": "test",
-		"ears": "test",
-		"nose": "test",
-		"mouth": "test",
-		"eyebrows": "test",
-		"hair": "guy2"
+		"name": "Ira Bernstein",
+		"startText": "Eh? What's that sonny?! Speak up! Ears aren’t what they used to be.",
+		"tags": "[Adulterer,Kind,Wealthy]",
+		"questions": "[6,7,8]",
+		"head": "guy3"
 	},
 	{
 		"id": "3",
 		"name": "Candace Berget",
-		"bio": "A mover and shaker in the real estate world, Candace didn't have time for family and friends. She ran her businesses to the best she could.",
-		"startText": "Hi, Candace, CEO, and real estate tycoon. I did good with what you gave me.",
-		"tags": ["Wealthy","Greedy","Honest"],
-		"questions": [9,10,11],
-		"eyes": "test",
-		"ears": "test",
-		"nose": "test",
-		"mouth": "test",
-		"eyebrows": "test",
-		"hair": "girl3"
+		"startText": "Hi, Candace, CEO, and real estate tycoon.",
+		"tags": "[Greedy,Hard Working,Wealthy]",
+		"questions": "[9,10,11]",
+		"head": "girl3"
 	},
 	{
 		"id": "4",
+		"name": "Kelly Goodson",
+		"startText": "Here I am. You gonna let me in or not?",
+		"tags": "[Greedy,Honest,Poor]",
+		"questions": "[12,13,14]",
+		"head": "girl1"
+	},
+	{
+		"id": "5",
+		"name": "Adam Day",
+		"startText": "Hell yeah I had a fun life. What's wrong with that? I never hurt nobody.",
+		"tags": "[Lazy,Generous,Wealthy]",
+		"questions": "[15,16,17]",
+		"head": "guy2"
+	},
+	{
+		"id": "6",
 		"name": "Petri Petrovich",
-		"bio": "Petri was a high ranking member of the KGB during the USSR. When the wall fell he became a policeman.",
-		"startText": "Zdravstvuyte! I kept the peace in my time. A noble task I think.",
-		"tags": ["Honest","Poor","Murderer"],
-		"questions": [12,13,14],
-		"eyes": "test",
-		"ears": "test",
-		"nose": "test",
-		"mouth": "test",
-		"eyebrows": "test",
-		"hair": "guy3"
+		"startText": "I kept the peace in my time. A noble task I think.",
+		"tags": "[Lazy,Generous,Poor]",
+		"questions": "[18,19,20]",
+		"head": "guy3"
+	},
+	{
+		"id": "7",
+		"name": "Alice Dewinter",
+		"startText": "Look, pal, I may not be winning any medals; but come on, I don't deserve the other place!",
+		"tags": "[Lazy,Honest,Wealthy]",
+		"questions": "[21,22,23]",
+		"head": "girl3"
+	},
+	{
+		"id": "8",
+		"name": "Gloria Espinoza",
+		"startText": "Dios Mio! I never saw that car coming!",
+		"tags": "[Murderer,Generous,Wealthy]",
+		"questions": "[24,25,26]",
+		"head": "girl2"
+	},
+	{
+		"id": "9",
+		"name": "James O'Dougal",
+		"startText": "Heya, Sainty, done me best to be a good boy. Went to mass, said me prayers, tried me hardest.",
+		"tags": "[Murderer,Kind,Poor]",
+		"questions": "[27,28,29]",
+		"head": "guy3"
 	}
 ]
