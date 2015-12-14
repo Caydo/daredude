@@ -106,106 +106,106 @@
 	},
 	{
 		"id": "15",
-		"question": "What was your goal?",
-		"answer": "needs text",
+		"question": "Well sometimes you need to do more that not hurt people.",
+		"answer": "I know that. And I did from time to time. I just was enjoying life.",
 		"next": "60",
-		"tagReveal": ""
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "16",
-		"question": "What was your greatest accomplishment?",
-		"answer": "needs text",
+		"question": "Do you think life is just about fun?",
+		"answer": "No. I get it, man. I just wanted to experience it all.",
 		"next": "61",
 		"tagReveal": ""
 	},
 	{
 		"id": "17",
 		"question": "Any regrets?",
-		"answer": "needs text",
+		"answer": "It was great. It really was.",
 		"next": "62",
 		"tagReveal": ""
 	},
 	{
 		"id": "18",
-		"question": "What was your goal?",
-		"answer": "needs text",
+		"question": "Kept the peace?",
+		"answer": "I used to be KGB. Then I become a normal police man in Russian Federation.",
 		"next": "66",
 		"tagReveal": ""
 	},
 	{
 		"id": "19",
-		"question": "What was your greatest accomplishment?",
-		"answer": "needs text",
+		"question": "What was your goal?",
+		"answer": "I just want to help people. To give what I can where I can.",
 		"next": "67",
-		"tagReveal": ""
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "20",
 		"question": "Any regrets?",
-		"answer": "needs text",
+		"answer": "Bah! I do not dwell on such things.",
 		"next": "68",
 		"tagReveal": ""
 	},
 	{
 		"id": "21",
-		"question": "What was your goal?",
-		"answer": "needs text",
+		"question": "More flies with sugar that vinegar much?",
+		"answer": "Alright, I may be a little rough around the edges; but hell, who has time for that cutesy stuff?",
 		"next": "72",
-		"tagReveal": ""
+		"tagReveal": "Honest"
 	},
 	{
 		"id": "22",
-		"question": "What was your greatest accomplishment?",
-		"answer": "needs text",
+		"question": "The other place?",
+		"answer": "The hot one. You know gnashing of teeth and so forth?",
 		"next": "73",
 		"tagReveal": ""
 	},
 	{
 		"id": "23",
-		"question": "Any regrets?",
-		"answer": "needs text",
+		"question": "What makes you so special?",
+		"answer": "Special? Why I gots to be special? Can't a gal just be a normal gal?",
 		"next": "74",
-		"tagReveal": ""
+		"tagReveal": "Honest"
 	},
 	{
 		"id": "24",
-		"question": "What was your goal?",
-		"answer": "needs text",
+		"question": "Well you're here now. Do you know where here is?",
+		"answer": "Ay! The Pearly Gates, you must be Santo Pedro!",
 		"next": "78",
 		"tagReveal": ""
 	},
 	{
 		"id": "25",
-		"question": "What was your greatest accomplishment?",
-		"answer": "needs text",
+		"question": "How terrible! Couldn't have been the traffic cop's fault though..",
+		"answer": "Are you kidding?! He was terrible! I suppose he was trying his hardest though.",
 		"next": "79",
-		"tagReveal": ""
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "26",
-		"question": "Any regrets?",
-		"answer": "needs text",
+		"question": "Were you paying attention?",
+		"answer": "My perrito knocked my smartphone right out of my hand.",
 		"next": "80",
-		"tagReveal": ""
+		"tagReveal": "Wealthy"
 	},
 	{
 		"id": "27",
-		"question": "What was your goal?",
-		"answer": "needs text",
+		"question": "Guess your luck ran out?",
+		"answer": "That's the secret about the luck o' the Irish. We're actually a pretty unlucky folk.",
 		"next": "84",
-		"tagReveal": ""
+		"tagReveal": "Poor"
 	},
 	{
 		"id": "28",
-		"question": "What was your greatest accomplishment?",
-		"answer": "needs text",
+		"question": "So you're Catholic?",
+		"answer": "That I am, and proud. Taught me to love thy neighbor, even the nastiest.",
 		"next": "85",
-		"tagReveal": ""
+		"tagReveal": "Kind"
 	},
 	{
 		"id": "29",
-		"question": "Any regrets?",
-		"answer": "needs text",
+		"question": "What did you do for a living?",
+		"answer": "Oh, I was a fisherman back in the old country, before I left for America.",
 		"next": "86",
 		"tagReveal": ""
 	},
@@ -421,191 +421,212 @@
 	},
 	{
 		"id": "60",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "Do you think you did enough to help your fellow person?",
+		"answer": "Look, I don't like to brag. Alright. I gave quite a bit to charity. So what. I'm not Gandhi.",
+		"next": "63",
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "61",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
+		"question": "Why should I let you in?",
+		"answer": "Not really too sure. I guess I'm an alright guy.",
+		"next": "64",
 		"tagReveal": ""
 	},
 	{
 		"id": "62",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What's your fondest memory?",
+		"answer": "Sitting on the beach all day in Nice. That was a good day.",
+		"next": "65",
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "63",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "What was your job?",
+		"answer": "I worked at my dad's company. Big place. Lots of vacation time.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Wealthy"
 	},
 	{
 		"id": "64",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "What was your goal?",
+		"answer": "Enjoy the sweeter things. Breathe deep.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "65",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "What was your greatest accomplishment?",
+		"answer": "I once got a letter from a kid. Apparently I paid for his school or something. First time I thought I'd done good.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "66",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
+		"question": "Are you lying to me?",
+		"answer": "Lying, no! I do not lie. I am a simple man; that is all.",
+		"next": "69",
 		"tagReveal": ""
 	},
 	{
 		"id": "67",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "Why should I let you in?",
+		"answer": "I was a lawman. I helped people. This is a noble thing.",
+		"next": "70",
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "68",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What was your greatest accomplishment?",
+		"answer": "Who cares of such things? Accomplishments? It is for the ambitious and the nefarious.",
+		"next": "71",
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "69",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Did you do you job well?",
+		"answer": "I got the job done. Nothing extra. But I did my job.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "70",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "What is your favorite memory?",
+		"answer": "Sitting by my mama with some fresh borscht and a roaring fire. The simple things.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Poor"
 	},
 	{
 		"id": "71",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "What was your worst mistake?",
+		"answer": "Once a man died in my arms. I was getting a coffee when the call came in. I didn't go right away.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "72",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What did you do for a living?",
+		"answer": "Job? What job? Daddy was rich. Paid my way the way through.",
+		"next": "75",
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "73",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What is your favorite memory?",
+		"answer": "Amsterdam by night and Rome by day. That was a helluva trip.",
+		"next": "76",
+		"tagReveal": "Wealthy"
 	},
 	{
 		"id": "74",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "Any regrets?",
+		"answer": "Zilch. Next question.",
+		"next": "77",
+		"tagReveal": "Honest"
 	},
 	{
 		"id": "75",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Why should I let you in?",
+		"answer": "Cause I did what a gal's gotta do to survive. I lived my life; never went outta my way for trouble.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Honest"
 	},
 	{
 		"id": "76",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Are you lying to me?",
+		"answer": "You really think the way I am I go in for lying?",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Honest"
 	},
 	{
 		"id": "77",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Anything else I should know?",
+		"answer": "I didn't do shit of consequence; but hell it was a ride.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Lazy"
 	},
 	{
 		"id": "78",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What was your greatest accomplishment?",
+		"answer": "I was a successful businesswoman and Latina.",
+		"next": "77",
+		"tagReveal": "Wealthy"
 	},
 	{
 		"id": "79",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What's your fondest memory?",
+		"answer": "Mi mami used to take us to the homeless shelters every weekend. We didn't have much then; but she said we must share it.",
+		"next": "78",
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "80",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
+		"question": "Any regrets?",
+		"answer": "Nada.",
+		"next": "79",
 		"tagReveal": ""
 	},
 	{
 		"id": "81",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "You wouldn't lie to me?",
+		"answer": "Lo siento. Once, as a small girl, I caused a man's death. It was all my fault. Mi mami, she hid it from the police.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Murderer"
 	},
 	{
 		"id": "82",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Why should I let you in?",
+		"answer": "I've been a good person. I helped people with my money. I wasn't greedy.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Generous"
 	},
 	{
 		"id": "83",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Anything else I should know?",
+		"answer": "I did hide something. When I was little I accidentally caused a man to die. It was fault. I should have been home. I am so sorry.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Murderer"
 	},
 	{
 		"id": "84",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
+		"question": "Why should I let you in?",
+		"answer": "Well you know what the good Book says. I've confessed me sins, I followed all the sacraments.",
+		"next": "84",
 		"tagReveal": ""
 	},
 	{
 		"id": "85",
-		"question": "needs text",
-		"answer": "needs text",
-		"next": "-1",
-		"tagReveal": ""
+		"question": "What's your fondest memory?",
+		"answer": "Me brother and I fishing out in the lake by me grandpappy's house. I sure do miss him.",
+		"next": "85",
+		"tagReveal": "Kind"
 	},
 	{
 		"id": "86",
-		"question": "needs text",
-		"answer": "needs text",
+		"question": "Why did you leave your home?",
+		"answer": "I had to leave the old country after me brother passed. He was a nasty one that boy.",
+		"next": "86",
+		"tagReveal": "Murderer"
+	},
+	{
+		"id": "87",
+		"question": "How did you get to America?",
+		"answer": "I smuggled aboard a freight ship. Not the grandest of settings; but one I could afford.",
 		"next": "-1",
-		"tagReveal": ""
+		"tagReveal": "Poor"
+	},
+	{
+		"id": "88",
+		"question": "What happened to your brother?",
+		"answer": "One night he got into the drink. Started hitting his old lady. I only meant to stop him..",
+		"next": "-1",
+		"tagReveal": "Murderer"
+	},
+	{
+		"id": "89",
+		"question": "Anything else I should know?",
+		"answer": "I didn't leave the old country in the best way. My brother got into the drink one night. He had quite the temper, I only meant to stop him..",
+		"next": "-1",
+		"tagReveal": "Murderer"
 	}
 ]
