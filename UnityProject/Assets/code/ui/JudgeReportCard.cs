@@ -11,6 +11,9 @@ namespace Assets.code.ui
     [SerializeField] Text[] reportCardTextColumns = null;
     [SerializeField] Text savedCarsText = null;
     [SerializeField] JudgeStats judgeStats = null;
+
+    [SerializeField] Image absolvedPiImage;
+
     int incrementAmount = 5;
     public void OnEnable()
     {
@@ -27,6 +30,8 @@ namespace Assets.code.ui
           absolvedCount++;
         }
       }
+
+      absolvedPiImage.fillAmount = (float)absolvedCount / (float)(damnedCount + absolvedCount);
 
       DamnedText.text = string.Format("Damned Souls: {0}", damnedCount);
       AbsolvedText.text = string.Format("Absolved Souls: {0}", absolvedCount);
