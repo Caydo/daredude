@@ -4,7 +4,7 @@
 		"name": "John Goodson",
 		"startText": "Well, guess I finally bit the big one. Hope my family will get by without me.",
 		"tags": "[Adulterer,Hard Working,Poor]",
-		"questions": "[0,1,2]",
+		"questions": [0,1,2],
 		"head": "Guy1"
 	},
 	{
@@ -12,7 +12,7 @@
 		"name": "Delores Logan",
 		"startText": "I've had it pretty rough okay? How's about you gimme a pass on what I did?",
 		"tags": "[Adulterer,Honest,Poor]",
-		"questions": "[3,4,5]",
+		"questions": [3,4,5],
 		"head": "girl2"
 	},
 	{
@@ -20,7 +20,7 @@
 		"name": "Ira Bernstein",
 		"startText": "Eh? What's that sonny?! Speak up! Ears aren’t what they used to be.",
 		"tags": "[Adulterer,Kind,Wealthy]",
-		"questions": "[6,7,8]",
+		"questions": [6,7,8],
 		"head": "guy3"
 	},
 	{
@@ -28,7 +28,7 @@
 		"name": "Candace Berget",
 		"startText": "Hi, Candace, CEO, and real estate tycoon.",
 		"tags": "[Greedy,Hard Working,Wealthy]",
-		"questions": "[9,10,11]",
+		"questions": [9,10,11],
 		"head": "girl3"
 	},
 	{
@@ -36,7 +36,7 @@
 		"name": "Kelly Goodson",
 		"startText": "Here I am. You gonna let me in or not?",
 		"tags": "[Greedy,Honest,Poor]",
-		"questions": "[12,13,14]",
+		"questions": [12,13,14],
 		"head": "girl1"
 	},
 	{
@@ -44,7 +44,7 @@
 		"name": "Adam Day",
 		"startText": "Hell yeah I had a fun life. What's wrong with that? I never hurt nobody.",
 		"tags": "[Lazy,Generous,Wealthy]",
-		"questions": "[15,16,17]",
+		"questions": [15,16,17],
 		"head": "guy2"
 	},
 	{
@@ -52,7 +52,7 @@
 		"name": "Petri Petrovich",
 		"startText": "I kept the peace in my time. A noble task I think.",
 		"tags": "[Lazy,Generous,Poor]",
-		"questions": "[18,19,20]",
+		"questions": [18,19,20],
 		"head": "guy3"
 	},
 	{
@@ -60,7 +60,7 @@
 		"name": "Alice Dewinter",
 		"startText": "Look, pal, I may not be winning any medals; but come on, I don't deserve the other place!",
 		"tags": "[Lazy,Honest,Wealthy]",
-		"questions": "[21,22,23]",
+		"questions": [21,22,23],
 		"head": "girl3"
 	},
 	{
@@ -68,7 +68,7 @@
 		"name": "Gloria Espinoza",
 		"startText": "Dios Mio! I never saw that car coming!",
 		"tags": "[Murderer,Generous,Wealthy]",
-		"questions": "[24,25,26]",
+		"questions": [24,25,26],
 		"head": "girl2"
 	},
 	{
@@ -76,7 +76,7 @@
 		"name": "James O'Dougal",
 		"startText": "Heya, Sainty, done me best to be a good boy. Went to mass, said me prayers, tried me hardest.",
 		"tags": "[Murderer,Kind,Poor]",
-		"questions": "[27,28,29]",
+		"questions": [27,28,29],
 		"head": "guy3"
 	}
 ]
