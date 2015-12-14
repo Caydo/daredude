@@ -70,15 +70,32 @@ namespace Assets.code.ui
       // only do 5 tags at a time
       for(int i = index; i < index + 5; i++)
       {
-        KeyValuePair<string, int> kvp = allTags.ElementAt(i);
-        string tagName = kvp.Key;
-        string totalJudgedAvailableWithTag = kvp.Value.ToString();
-        int absolvedCountForTag = (absolvedTags.ContainsKey(kvp.Key)) ? absolvedTags[kvp.Key] : 0;
+        if (i < allTags.Count)
+        {
+            KeyValuePair<string, int> kvp = allTags.ElementAt(i);
+            string tagName = kvp.Key;
+            int totalJudgedAvailableWithTag = kvp.Value;
+            int absolvedCountForTag = (absolvedTags.ContainsKey(kvp.Key)) ? absolvedTags[kvp.Key] : 0;
 
-        statsText += string.Format("{0}: {1}/{2}\n", tagName, absolvedCountForTag.ToString(), totalJudgedAvailableWithTag);
+            statsText += string.Format("{0}: ", tagName);
+
+            for (int j = 0; j < absolvedCountForTag; j++)
+            {
+                statsText += angel;
+            }
+            int damnedCount = totalJudgedAvailableWithTag - absolvedCountForTag;
+            for (int j = 0; j < damnedCount; j++)
+            {
+                statsText += devil;
+            }
+            statsText += "\n";
+        }
       }
 
       return statsText;
     }
-  }
+
+    const string devil = "   <color=#A80000FF>*</color>   ";
+    const string angel = "   <color=#F9DF71FF>;</color>   ";
+    }
 }
