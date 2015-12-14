@@ -18,7 +18,12 @@ public class DataContainer : MonoBehaviour
   void Start()
   {
     getData();
-    int judgePeopleCount = GameObject.FindWithTag("JudgePeopleCount").GetComponent<JudgePeopleCount>().Count;
+    GameObject peopleCountObject = GameObject.FindWithTag("JudgePeopleCount");
+    int judgePeopleCount = 5;
+    if (peopleCountObject != null)
+    {
+        judgePeopleCount = GameObject.FindWithTag("JudgePeopleCount").GetComponent<JudgePeopleCount>().Count;
+    }
     for (int i = 0; i < judgePeopleCount; i++)
     {
       int randomNumberPerson = Random.Range(0, AllJudgedPeople.Count - 1);
