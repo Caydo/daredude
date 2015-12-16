@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Linq;
+using System.Collections.Generic;
 
 public class EnterQueueState : GoingState {
     public float CAR_SEPARATION = 1f;
@@ -20,21 +21,25 @@ public class EnterQueueState : GoingState {
 
         var currentPosition = self.transform.localPosition;
         var vehiclesAhead = self.transform.parent.Cast<Transform>()
-            .Where(t => {
-                var notSelf = t!= self.transform;
+            .Where(t =>
+            {
+                var notSelf = t != self.transform;
                 var isAhead = directionMagnitude(t.localPosition) > directionMagnitude(self.transform.localPosition);
                 var isVehicle = (t.GetComponent<Vehicle>() != null);
                 //Debug.Log(string.Format("checking vehicles ahead {0} {1} {2} {3} {4}", self.transform.name, t.name, notSelf, isAhead, isVehicle));
                 return notSelf && isAhead && isVehicle;
             })
             .Select(t => t.localPosition)
-            .Select(t => directionMagnitude(t))
-            .OrderBy(t => t);
+            .Select(t => directionMagnitude(t));
+        //.OrderBy(t => t);
+
+        List<float> vehiclesAheadSorted = new List<float>(vehiclesAhead);
+        vehiclesAheadSorted.Sort();
 
         var separation = selfLane.carRangeMax;
-        if(vehiclesAhead.Any()) 
+        if(vehiclesAheadSorted.Any()) 
         {
-            separation = vehiclesAhead.First() - directionMagnitude(currentPosition);
+            separation = vehiclesAheadSorted.First() - directionMagnitude(currentPosition);
 
             //Debug.Log(string.Format("checking vehicles ahead 2 {0} {1} {2} {3} {4}", self.transform.name, vehiclesAhead.First(), directionMagnitude(currentPosition), separation, CAR_SEPARATION));
             if (separation <= CAR_SEPARATION)

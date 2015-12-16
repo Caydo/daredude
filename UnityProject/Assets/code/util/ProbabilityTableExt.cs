@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
+//using System.Linq;
 
 public class ProbabilityTableEntry<A>
 {
@@ -17,11 +17,16 @@ public class ProbabilityTableEntry<A>
 public static class ProbabilityTableExt {
     public static A rollFromTable<A>(this IEnumerable<ProbabilityTableEntry<A>> table)
     {
-        var sortedList = table.OrderBy(p => p.probability);
-        var retval = sortedList.First();
+        List<ProbabilityTableEntry<A>> sortedList = new List<ProbabilityTableEntry<A>>(table); //.OrderBy(p => p.probability);
+        sortedList.Sort((a, b) =>
+        {
+            return a.probability.CompareTo(b.probability);
+        });
+
+        var retval = sortedList[0];
         float roll = Random.Range(0f, 1f);
         var rangeUsed = 0f;
-        foreach(var tableEntry in sortedList.Skip(1))
+        foreach (var tableEntry in sortedList.GetRange(1, sortedList.Count - 1))
         {
             if(roll < (rangeUsed + tableEntry.probability))
             {
@@ -33,3 +38,4 @@ public static class ProbabilityTableExt {
         return retval.thingy;
     }
 }
+

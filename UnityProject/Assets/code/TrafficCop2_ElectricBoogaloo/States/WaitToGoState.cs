@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Linq;
+using System.Collections.Generic;
 
 public class WaitToGoState : GoingState
 {
@@ -27,15 +28,18 @@ public class WaitToGoState : GoingState
              return notSelf && isAhead && isVehicle && isNotEnteringQueue;
          })
          .Select(t => t.localPosition)
-         .Select(t => directionMagnitude(t))
-         .OrderBy(t => t);
-          
-        if(vehiclesBehind.Count() >= (threshold - 1) && !AngryIndicator.activeInHierarchy)
+         .Select(t => directionMagnitude(t));
+         //.OrderBy(t => t);
+
+        List<float> vehiclesBehindSorted = new List<float>(vehiclesBehind);
+        vehiclesBehindSorted.Sort();
+
+        if (vehiclesBehindSorted.Count() >= (threshold - 1) && !AngryIndicator.activeInHierarchy)
         {
           AngryIndicator.SetActive(true);  
         }
 
-        if((vehiclesBehind.Count() >= threshold) || (road.currentPolicy == TrafficPolicy.Go))
+        if((vehiclesBehindSorted.Count() >= threshold) || (road.currentPolicy == TrafficPolicy.Go))
         {
             stateMachine.GoTo("Go");
         }
