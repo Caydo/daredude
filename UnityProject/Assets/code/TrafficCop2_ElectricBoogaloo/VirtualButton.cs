@@ -15,7 +15,7 @@ public class VirtualButton : MonoBehaviour {
     {
         if (m_button != null)
         {
-#if UNITY_ANDROID
+#if UNITY_ANDROID || UNITY_IOS
             m_button.enabled = true;
 #else
             m_button.enabled = false;
